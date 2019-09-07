@@ -6,21 +6,41 @@
              xmlns:local="clr-namespace:Dandi"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style x:Key="StyleTbx" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                               Visibility="Collapsed" Foreground="Gray" FontFamily="Arial" FontSize="9"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
         <Image Margin="0,0,0,-0.4" Source="Assets/bg.png" Stretch="Fill"/>
         <Image Margin="27,27,651,380.6" Source="Assets/Sig.png" Stretch="Fill"/>
 
-        <Button x:Name="btnlogin" Content="로그인" Margin="450,309,228,74.6" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="66" Width="122" Click="Btnlogin_Click"/>
-        <TextBox x:Name="tbpw" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="332,342,354,74.6"/>
+        <Button x:Name="btnlogin" Content="로그인" Margin="427,317,251,66.6" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="66" Width="122" Click="Btnlogin_Click"/>
+        <TextBox x:Name="tbpw" Style="{StaticResource StyleTbx}" Tag="비밀버호" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,350,377,66.6"/>
         <Image Margin="0,355,0,-0.4" Source="Assets/footer1.png" Stretch="Fill"/>
 
-        <Border Margin="253,309,471,107.6" Padding="5" BorderThickness="1" BorderBrush="Gray" Background="White" CornerRadius="10">
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Text="아이디" Margin="-5,-6,-6.4,-6.2"/>
-        </Border>
-        <Border Margin="252,342,472,74.6" Padding="5" BorderThickness="1" BorderBrush="Gray" Background="White" CornerRadius="10">
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-5,-6,-6.4,-6.2"><Run Text="비밀번호"/></TextBlock>
-        </Border>
-        <TextBox  x:Name="tbid" Text="{Binding Id}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="332,309,354,107.6"/>
+        <TextBox  x:Name="tbid" Style="{StaticResource StyleTbx}" Tag="아이디" Text="{Binding Id}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,317,377,99.6"/>
         <Image Margin="342,120,301,173.6" Source="Assets/profile.png" Stretch="Fill"/>
     </Grid>
 </UserControl>
