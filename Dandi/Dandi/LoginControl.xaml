@@ -37,7 +37,7 @@
         <Image Margin="27,27,651,380.6" Source="Assets/Sig.png" Stretch="Fill"/>
 
         <Button x:Name="btnlogin" Content="로그인" Margin="427,317,251,66.6" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="66" Width="122" Click="Btnlogin_Click"/>
-        <TextBox x:Name="tbpw" Style="{StaticResource StyleTbx}" Tag="비밀버호" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,350,377,66.6"/>
+        <TextBox x:Name="tbpw" Style="{StaticResource StyleTbx}" Tag="비밀번호" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,350,377,66.6"/>
         <Image Margin="0,355,0,-0.4" Source="Assets/footer1.png" Stretch="Fill"/>
 
         <TextBox  x:Name="tbid" Style="{StaticResource StyleTbx}" Tag="아이디" Text="{Binding Id}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,317,377,99.6"/>
