@@ -32,6 +32,7 @@
         </Style>
     </UserControl.Resources>
 
+    
     <Grid>
         <Image Margin="0,0,0,-0.4" Source="Assets/bg.png" Stretch="Fill"/>
         <Image Margin="27,27,651,380.6" Source="Assets/Sig.png" Stretch="Fill"/>

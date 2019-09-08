@@ -28,12 +28,6 @@ namespace Dandi
 
         private void Btnlogin_Click(object sender, RoutedEventArgs e)
         {
-            //string Id = tbid.Text;
-            //string Pw = tbid.Text;
-
-            //App.loginData.loginViewModel.Id = Id;
-            //App.loginData.loginViewModel.Password = Pw;
-
             App.loginData.loginViewModel.ServerAddress = "http://10.80.162.124:5000";
 
             App.loginData.Login();
