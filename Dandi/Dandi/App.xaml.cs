@@ -15,5 +15,10 @@ namespace Dandi
     public partial class App : Application
     {
         public static LoginData loginData = new LoginData();
+
+        public App()
+        {
+            Common.Setting.Load();
+        }
     }
 }
