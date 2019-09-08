@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using BIND.Core.Login;
+using Dandi.Common;
 
 namespace Dandi
 {
@@ -18,7 +19,7 @@ namespace Dandi
 
         public App()
         {
-            Common.Setting.Load();
+            Setting.Load();
         }
     }
 }
