@@ -37,13 +37,13 @@
         <Image Margin="0,0,0,-0.4" Source="Assets/bg.png" Stretch="Fill"/>
         <Image Margin="27,27,651,380.6" Source="Assets/Sig.png" Stretch="Fill"/>
 
-        <Button x:Name="btnlogin" Content="로그인" Margin="427,238,251,145.6" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="66" Width="122" Click="Btnlogin_Click"/>
-        <TextBox x:Name="tbpw" Style="{StaticResource StyleTbx}" Tag="비밀번호" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,271,377,145.6"/>
+        <CheckBox x:Name="btnAutoLogin" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="40" Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="자동 로그인" Margin="322,298,378,111.6"/>
+        
+        <Button x:Name="btnlogin" Content="로그인" Margin="441,238,237,145.6" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="66" Width="122" Click="Btnlogin_Click"/>
+        <TextBox x:Name="tbpw" Style="{StaticResource StyleTbx}" Tag="비밀번호" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="327,271,359,145.6"/>
         <Image Margin="0,355,0,-0.4" Source="Assets/footer1.png" Stretch="Fill"/>
 
-        <TextBox  x:Name="tbid" Style="{StaticResource StyleTbx}" Tag="아이디" Text="{Binding Id}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="309,238,377,178.6"/>
-        <Image Margin="342,47,301,246.6" Source="Assets/profile.png" Stretch="Fill"/>
-
-        <CheckBox x:Name="btnAutoLogin" Foreground="White" Height="33" Width="86" HorizontalAlignment="Center" VerticalAlignment="Center" Content="자동 로그인" Margin="309,317,405,99.6"/>
+        <TextBox  x:Name="tbid" Style="{StaticResource StyleTbx}" Tag="아이디" Text="{Binding Id}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="327,238,359,178.6"/>
+        <Image Margin="366,47,277,246.6" Source="Assets/profile.png" Stretch="Fill"/>
     </Grid>
 </UserControl>
