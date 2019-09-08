@@ -40,6 +40,7 @@ namespace Dandi
         {
             App.loginData.loginViewModel.Id = Settings.Default.userId;
             App.loginData.loginViewModel.Password = Settings.Default.userPw;
+
             btnAutoLogin.IsChecked = Settings.Default.isAutoLogin;
 
             if (btnAutoLogin.IsChecked == true)
