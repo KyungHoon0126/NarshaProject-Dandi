@@ -38,7 +38,7 @@ namespace Dandi
             App.loginData.loginViewModel.OnLoginResultRecieved += LoginViewModel_OnLoginResultRecieved;
         }
 
-        private void LoginViewModel_OnLoginResultRecieved(object sender, bool success)
+        public void LoginViewModel_OnLoginResultRecieved(object sender, bool success)
         {
             if(success)
             {

@@ -23,6 +23,8 @@ namespace Dandi
         public Schedule()
         {
             InitializeComponent();
+            this.DataContext = App.personalscheudle;
+            this.DataContext = App.publicschedule;
         }
     }
 }
