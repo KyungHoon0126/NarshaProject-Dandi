@@ -42,6 +42,9 @@ namespace Dandi
         {
             if(success)
             {
+                // IsAutoLoginChecked();
+                // 로그인 성공시에 자동 로그인을 체크했을 경우 Id, Pw 저장 → 자동 로그인이 되도록.. 고민좀 해보기
+
                 MessageBox.Show("로그인에 성공하셨습니다.");
                 ctrlLogin.Visibility = Visibility.Collapsed;
                 ctrlSchedule.Visibility = Visibility.Visible;
@@ -76,12 +79,6 @@ namespace Dandi
             this.WindowStyle = WindowStyle.None;
             this.Foreground = Brushes.White;
         }
-
-        //private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    ShowOnWorkerW();
-        //    FillDisplay();
-        //}
 
         private void InitOnDisplaySettingChanged()
         {

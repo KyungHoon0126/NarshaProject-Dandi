@@ -74,12 +74,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Setting.cs" />
+    <Compile Include="DandiMainHome.xaml.cs">
+      <DependentUpon>DandiMainHome.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Schedule.xaml.cs">
       <DependentUpon>Schedule.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ScheduleViewModel.cs" />
     <Compile Include="W32.cs" />
     <Page Include="LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DandiMainHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

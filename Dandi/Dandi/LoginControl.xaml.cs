@@ -32,11 +32,11 @@ namespace Dandi
         private void Loaded()
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         {
-            this.DataContext = App.loginData.loginViewModel;
+            this.DataContext = App.loginData.loginViewModel; // Id & Pw Binding을 하기 위함.
             IsAutoLoginChecked();
         }
 
-        private void IsAutoLoginChecked()
+        private void IsAutoLoginChecked() // 자동 로그인
         {
             App.loginData.loginViewModel.Id = Settings.Default.userId;
             App.loginData.loginViewModel.Password = Settings.Default.userPw;
