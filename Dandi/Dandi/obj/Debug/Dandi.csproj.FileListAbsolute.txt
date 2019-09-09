@@ -68,7 +68,6 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\TNetwork.pdb
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\TNetwork.dll.config
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\Prism.pdb
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\Prism.xml
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\Newtonsoft.Json.pdb
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\Newtonsoft.Json.xml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\RestSharp.xml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\System.ValueTuple.xml
