@@ -82,7 +82,6 @@
     <Grid x:Name="LayoutRoot">
         <Image Margin="0,-475,10,-181.4" Source="Assets/Image1.png" Stretch="Fill"/>
         <CheckBox Foreground="White" HorizontalAlignment="Center" Style="{DynamicResource CheckBoxStyle1}" VerticalAlignment="Center" Content="CheckBox" Margin="677,15,15,408.6"/>
-        
     </Grid>
     
 </UserControl>

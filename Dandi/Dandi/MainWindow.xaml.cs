@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Dandi.Properties;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -48,16 +49,19 @@ namespace Dandi
                 MessageBox.Show("로그인에 성공하셨습니다.");
                 ctrlLogin.Visibility = Visibility.Collapsed;
                 ctrlSchedule.Visibility = Visibility.Visible;
-
                 UpdateScreen();
                 MainWindow_Loaded();
             }
             else
             {
                 MessageBox.Show("로그인에 실패하셨습니다.");
+                Settings.Default.isAutoLogin = false;
+                Settings.Default.userId = string.Empty;
+                Settings.Default.userPw = string.Empty;
+                Settings.Default.Save();
             }
         }
-
+        
         private void MainWindow_Loaded()
         {
             ShowOnWorkerW();
