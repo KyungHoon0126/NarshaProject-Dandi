@@ -16,14 +16,20 @@ namespace Dandi
     /// </summary>
     public partial class App : Application
     {
+        // Login
         public static LoginData loginData = new LoginData();
 
+        // AutoLogin
         public App()
         {
             Setting.Load();
         }
 
+        // Schedule
         public static ScheduleViewModel personalscheudle = new ScheduleViewModel();
         public static ScheduleViewModel publicschedule = new ScheduleViewModel();
+
+        // ToggleSwitch
+        public static ToggleSwitch toggleswitch = new ToggleSwitch();
     }
 }
