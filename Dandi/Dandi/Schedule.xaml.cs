@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,23 @@ namespace Dandi
             InitializeComponent();
             this.DataContext = App.personalscheudle;
             this.DataContext = App.publicschedule;
+        }
+
+        public static void Main(string[] args)
+        {
+#pragma warning disable IDE0059 // Unnecessary assignment of a value
+            var client = new RestClient("http://10.80.162.124:5000");
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
+
+            #pragma warning disable IDE0059 // Unnecessary assignment of a value
+            var request = new RestRequest("", Method.GET);
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
+
+            IRestResponse response = client.Execute(request);
+
+
+
+
         }
     }
 }
