@@ -54,7 +54,6 @@ namespace Dandi.Model
         //    }
         //}
 
-
         // private integer _schoolclass = integer.Empty;
         //public string SchoolClass
         //{
@@ -94,7 +93,7 @@ namespace Dandi.Model
         //        SetProperty(ref _channelid, value);
         //    }
         //}
-
+        
         private string _title = string.Empty;
         public string Title
         {
