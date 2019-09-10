@@ -1,8 +1,9 @@
 ﻿using Prism.Mvvm;
+using System;
 
 namespace Dandi.Model
 {
-    public class Event : BindableBase
+    public class Event : BindableBase, ICloneable
     {
         private string _userid = string.Empty;
         public string UserId
