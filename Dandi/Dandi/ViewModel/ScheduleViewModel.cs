@@ -9,6 +9,6 @@ namespace Dandi.ViewModel
 {
     public class ScheduleViewModel : BindableBase
     {
-           
+                  
     }
 }

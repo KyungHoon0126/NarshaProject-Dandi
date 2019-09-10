@@ -2,7 +2,7 @@
 
 namespace Dandi.Model
 {
-    public class @event : BindableBase
+    public class Event : BindableBase
     {
         private string _userid = string.Empty;
         public string UserId
