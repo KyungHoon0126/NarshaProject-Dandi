@@ -78,6 +78,7 @@
       <DependentUpon>DandiMainHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\EventResponse.cs" />
     <Compile Include="Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>

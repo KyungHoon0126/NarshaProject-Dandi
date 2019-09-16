@@ -1,4 +1,5 @@
 ﻿using Dandi.Properties;
+using Dandi.ViewModel;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -34,23 +35,32 @@ namespace Dandi
             InitializeComponent();
             InitWorkerW();
             InitOnDisplaySettingChanged();
+
             // this.Loaded += MainWindow_Loaded;
 
             App.loginData.loginViewModel.OnLoginResultRecieved += LoginViewModel_OnLoginResultRecieved;
         }
 
+        // 분노의 일정 테스트
+        //public async void AA()
+        //{
+        //    EventViewModel eventView = new EventViewModel();
+        //    await eventView.SetBusTypeList();
+        //}
+
         public void LoginViewModel_OnLoginResultRecieved(object sender, bool success)
         {
             if(success)
             {
-                // IsAutoLoginChecked();
-                // 로그인 성공시에 자동 로그인을 체크했을 경우 Id, Pw 저장 → 자동 로그인이 되도록.. 고민좀 해보기
+                // 분노의 일정 테스트
+                // AA();
 
                 MessageBox.Show("로그인에 성공하셨습니다.");
                 ctrlLogin.Visibility = Visibility.Collapsed;
                 ctrlSchedule.Visibility = Visibility.Visible;
                 UpdateScreen();
                 MainWindow_Loaded();
+
             }
             else
             {
