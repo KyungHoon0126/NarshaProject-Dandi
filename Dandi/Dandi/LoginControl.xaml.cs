@@ -54,12 +54,15 @@ namespace Dandi
             Setting.SaveUserdata(tbid.Text, tbpw.Text);
 
             Settings.Default.isAutoLogin = btnAutoLogin.IsChecked.Value;
-            Settings.Default.ServerURL = "http://10.80.162.124:5000";
+
+            // Settings.Default.ServerURL = "http://10.80.161.223:5000";
+            Settings.Default.ServerURL = "http://10.80.162.191";
 
             Settings.Default.Save();
 
 
-            App.loginData.loginViewModel.ServerAddress = "http://10.80.162.124:5000";
+            // App.loginData.loginViewModel.ServerAddress = "http://10.80.161.223:5000";
+            App.loginData.loginViewModel.ServerAddress = "http://10.80.162.191";
 
             App.loginData.Login();
         }

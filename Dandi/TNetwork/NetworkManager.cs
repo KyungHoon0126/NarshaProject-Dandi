@@ -139,7 +139,10 @@ namespace TNetwork
         public async Task<TResponse<T>> GetResponse<T>(string resource, Method method, string parameterJson = null, UrlSegment[] urlSegments = null, Header[] headers = null)
         {
             var client = CreateClient();
-            var restRequest = CreateRequest(resource, method, parameterJson, new TokenInfo ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlciIsImlhdCI6MTU2ODU1MzYxOCwiZXhwIjoxNTY4NTk2ODE4LCJpc3MiOiJkYW5kaSIsInN1YiI6InRva2VuIn0.87b4I1rznMLQZXjY6F8ogETT4dCl1cl7nSz64RkxlDc", ""), urlSegments, headers);
+            
+            // var restRequest = CreateRequest(resource, method, parameterJson, new TokenInfo ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlciIsImlhdCI6MTU2ODU1MzYxOCwiZXhwIjoxNTY4NTk2ODE4LCJpc3MiOiJkYW5kaSIsInN1YiI6InRva2VuIn0.87b4I1rznMLQZXjY6F8ogETT4dCl1cl7nSz64RkxlDc", ""), urlSegments, headers);
+            var restRequest = CreateRequest(resource, method, parameterJson, Options.tokenInfo, urlSegments, headers);
+
             var response = await client.ExecuteTaskAsync(restRequest);
 
             if (CheckTokenExpired(response))
