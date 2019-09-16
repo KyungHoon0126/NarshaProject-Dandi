@@ -9,8 +9,9 @@
         WindowStyle="None">
     <Grid>
 
-        <local:LoginControl x:Name="ctrlLogin"/>
+        <local:LoginControl x:Name="ctrlLogin" Visibility="Visible"/>
+        <!--<local:MainHome x:Name="ctrlMainHome"/>-->
         <local:Schedule x:Name="ctrlSchedule" Visibility="Collapsed"/>
-
+        <local:EventControl x:Name="ctrlEvent" Visibility="Collapsed"/>
     </Grid>
 </Window>

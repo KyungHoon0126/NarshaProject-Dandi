@@ -91,9 +91,11 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csproj.CoreCompileInp
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csproj.CopyComplete
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.exe
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.pdb
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\DandiMainHome.g.cs
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\DandiMainHome.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Profile.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\ToggleSwitch.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Profile.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\ToggleSwitch.baml
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainHome.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainHome.baml
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\EventControl.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\EventControl.baml

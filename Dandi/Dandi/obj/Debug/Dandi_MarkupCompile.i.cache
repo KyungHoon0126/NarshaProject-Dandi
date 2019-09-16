@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\App.xaml
-6-1569004945
+7-1374283366
 
-17-1576604733
+171430377872
 231591320203
-LoginControl.xaml;DandiMainHome.xaml;MainWindow.xaml;Profile.xaml;Schedule.xaml;ToggleSwitch.xaml;
+EventControl.xaml;LoginControl.xaml;MainHome.xaml;MainWindow.xaml;Profile.xaml;Schedule.xaml;ToggleSwitch.xaml;
 
-True
+False
 

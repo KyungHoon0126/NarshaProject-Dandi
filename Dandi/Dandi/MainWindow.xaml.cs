@@ -41,13 +41,8 @@ namespace Dandi
             App.loginData.loginViewModel.OnLoginResultRecieved += LoginViewModel_OnLoginResultRecieved;
         }
 
-        // 분노의 일정 테스트
-        //public async void AA()
-        //{
-        //    EventViewModel eventView = new EventViewModel();
-        //    await eventView.SetBusTypeList();
-        //}
 
+        // 로그인 성공 유무 판단 함수
         public void LoginViewModel_OnLoginResultRecieved(object sender, bool success)
         {
             if(success)
@@ -56,11 +51,29 @@ namespace Dandi
                 // AA();
 
                 MessageBox.Show("로그인에 성공하셨습니다.");
-                ctrlLogin.Visibility = Visibility.Collapsed;
-                ctrlSchedule.Visibility = Visibility.Visible;
-                UpdateScreen();
-                MainWindow_Loaded();
 
+                ctrlLogin.Visibility = Visibility.Hidden;
+                ctrlEvent.Visibility = Visibility.Visible;
+
+                // MainHome_Loaded();
+
+                //ctrlLogin.Visibility = Visibility.Collapsed;
+                //ctrlSchedule.Visibility = Visibility.Visible;
+                
+                //UpdateScreen();
+                //MainWindow_Loaded();
+
+                // ctrlMainHome.Visibility = Visibility.Collapsed;
+
+                // 만약 ToggleSwitch가 실행된다면 바탕화면에 일정이 깔리도록
+                //if ()
+                //{
+                //    ctrlLogin.Visibility = Visibility.Collapsed;
+                //    ctrlSchedule.Visibility = Visibility.Visible;
+                //    MainHome_Loaded();
+                //    UpdateScreen();
+                //    MainWindow_Loaded();
+                //}
             }
             else
             {
@@ -72,12 +85,14 @@ namespace Dandi
             }
         }
         
+        // 바탕화면에 일정들을 나타내기 위한 함수
         private void MainWindow_Loaded()
         {
             ShowOnWorkerW();
             FillDisplay();
         }
 
+        // Window에서 바로 Style을 줄 수 있지만, UserControl을 이용하므로 UpdateScreen으로 효과 적용.
         private void UpdateScreen()
         {
             // Background = "Transparent"
@@ -94,16 +109,29 @@ namespace Dandi
             this.Foreground = Brushes.White;
         }
 
+        // MainHome에서 ToggleSwitch 버튼으로 일정을 나타낼지 말지 결정하는 함수
+        private void MainHome_Loaded() 
+        {
+            //// ToggleSwitch Ischecked를 여기서 어떻게 사용하지?
+            //if (ctrlMainHome.IsEnabled == true)
+            //{
+            //    ctrlMainHome.Visibility = Visibility.Visible;
+            //}
+        }
+
+        // 바탕화면에 일정들을 나타내기 위한 함수
         private void InitOnDisplaySettingChanged()
         {
             SystemEvents.DisplaySettingsChanged += SystemEvents_DisplaySettingsChanged;
         }
 
+        // 바탕화면에 일정들을 나타내기 위한 함수
         private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
         {
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(FillDisplay));
         }
 
+        // 바탕화면에 일정들을 나타내기 위한 함수
         private void InitWorkerW()
         {
             // Fetch the Progman window
@@ -157,6 +185,7 @@ namespace Dandi
             // it has to be done the LowLevel way (WH_MOUSE_LL, WH_KEYBOARD_LL).
         }
 
+        // 바탕화면에 일정들을 나타내기 위한 함수
         private IntPtr GetWindowHandle()
         {
             if (_currentHwnd != IntPtr.Zero) return _currentHwnd;
@@ -180,6 +209,7 @@ namespace Dandi
             this.Height = area.Height;
         }
 
+        // 바탕화면에 일정들을 나타내기 위한 함수
         private void ShowOnWorkerW()
         {
             var hwnd = GetWindowHandle();

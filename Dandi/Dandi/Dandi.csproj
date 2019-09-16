@@ -74,28 +74,34 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Setting.cs" />
-    <Compile Include="DandiMainHome.xaml.cs">
-      <DependentUpon>DandiMainHome.xaml</DependentUpon>
+    <Compile Include="EventControl.xaml.cs">
+      <DependentUpon>EventControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainHome.xaml.cs">
+      <DependentUpon>MainHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Event.cs" />
-    <Compile Include="Model\EventResponse.cs" />
-    <Compile Include="Profile.xaml.cs">
-      <DependentUpon>Profile.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Schedule.xaml.cs">
       <DependentUpon>Schedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Response\EventResponse.cs" />
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
     <Compile Include="ToggleSwitch.xaml.cs">
       <DependentUpon>ToggleSwitch.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\EventViewModel.cs" />
-    <Compile Include="ViewModel\ScheduleViewModel.cs" />
     <Compile Include="W32.cs" />
+    <Page Include="EventControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DandiMainHome.xaml">
+    <Page Include="MainHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

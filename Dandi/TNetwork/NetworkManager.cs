@@ -103,6 +103,8 @@ namespace TNetwork
                 {
                     ContractResolver = contractResolver,
                     Formatting = Formatting.Indented,
+                    NullValueHandling = NullValueHandling.Ignore,
+                    MissingMemberHandling = MissingMemberHandling.Ignore
                 });
                 return resp;
             }
@@ -120,8 +122,8 @@ namespace TNetwork
         /// <returns>RestClient</returns>
         private static RestClient CreateClient()
         {
-            // var restClient = new RestClient("http://10.80.161.223:5000") { Timeout = Options.timeOut };
-            var restClient = new RestClient("http://10.80.162.191:5000") { Timeout = Options.timeOut };
+             var restClient = new RestClient("http://10.80.161.223:5000") { Timeout = Options.timeOut };
+            // var restClient = new RestClient("http://10.80.162.191:5000") { Timeout = Options.timeOut };
             return restClient;
         }
 
@@ -138,7 +140,7 @@ namespace TNetwork
         /// <param name="headers">기본 null. 헤더</param>
         /// <returns>통신후 TResponse를 반환합니다.</returns>
         public async Task<TResponse<T>> GetResponse<T>(string resource, Method method, string parameterJson = null, UrlSegment[] urlSegments = null, Header[] headers = null)
-        {
+        { 
             var client = CreateClient();
             
             // var restRequest = CreateRequest(resource, method, parameterJson, new TokenInfo ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlciIsImlhdCI6MTU2ODU1MzYxOCwiZXhwIjoxNTY4NTk2ODE4LCJpc3MiOiJkYW5kaSIsInN1YiI6InRva2VuIn0.87b4I1rznMLQZXjY6F8ogETT4dCl1cl7nSz64RkxlDc", ""), urlSegments, headers);

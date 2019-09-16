@@ -19,6 +19,6 @@
             </Grid>
             <TextBlock Foreground="White" Text="   ◇  Project Dandi" Margin="0,10,0,0" FontSize="16" FontWeight="ExtraBold"/>
             <TextBlock Foreground="White" Text="   ◇  Project Dandi" Margin="0,10,0,0" FontSize="16" FontWeight="ExtraBold"/>
-        </StackPanel> 
+        </StackPanel>
     </Grid>
 </UserControl>
