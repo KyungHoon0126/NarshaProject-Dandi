@@ -39,7 +39,7 @@ namespace BIND.Core.Login.Network
             // Console.WriteLine(pw); // 암호화 코드 → break point
             var resp = await networkManager.GetResponse<TokenInfo>(Options.loginUrl, Method.POST, jObj.ToString());
 
-            if (resp.Data != null)
+             if (resp.Data != null)
             {
                 Options.tokenInfo.Token = resp.Data.Token;
                 Options.tokenInfo.RefreshToken = resp.Data.RefreshToken;

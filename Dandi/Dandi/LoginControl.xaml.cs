@@ -56,13 +56,13 @@ namespace Dandi
             Settings.Default.isAutoLogin = btnAutoLogin.IsChecked.Value;
 
             // Settings.Default.ServerURL = "http://10.80.161.223:5000";
-            Settings.Default.ServerURL = "http://10.80.162.191";
+            Settings.Default.ServerURL = "http://10.80.162.191:5000";
 
             Settings.Default.Save();
 
 
             // App.loginData.loginViewModel.ServerAddress = "http://10.80.161.223:5000";
-            App.loginData.loginViewModel.ServerAddress = "http://10.80.162.191";
+            App.loginData.loginViewModel.ServerAddress = "http://10.80.162.191:5000";
 
             App.loginData.Login();
         }

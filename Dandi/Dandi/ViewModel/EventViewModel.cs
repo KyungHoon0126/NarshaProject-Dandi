@@ -1,4 +1,5 @@
 ﻿using Dandi.Model;
+using Prism.Mvvm;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -11,26 +12,37 @@ using TNetwork.Data;
 
 namespace Dandi.ViewModel
 {
-    public class EventViewModel 
+    public class EventViewModel : BindableBase
     {
         private ObservableCollection<Model.Event> _events;
+        public ObservableCollection<Model.Event> Events
+        {
+            get => _events;
+            set => SetProperty(ref _events, value);
+        }
+
 
         public NetworkManager networkManager = new NetworkManager();
 
 
-        public async Task SetBusTypeList()
+        public async Task SetEventList()
         {
             TResponse<EventResponse> resp;
 
-            resp = await networkManager.GetResponse<EventResponse>("channel-event?channel_id=4", Method.GET, null);
+#pragma warning disable IDE0059 // Unnecessary assignment of a value
+            resp = await networkManager.GetResponse<EventResponse>("channel-event?channel_id=1", Method.GET, null);
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
 
             //if (resp != null && resp.Status == 200 && resp.Data != null)
             //{
             //    try
             //    {
-            //        foreach (var item in resp.Data.Types)
+            //        lock (_lock)
             //        {
-            //            TypeItems.Add((Model.Bus)item.Clone());
+            //            foreach (var item in resp.Data.Types)
+            //            {
+            //                TypeItems.Add((Model.Bus)item.Clone());
+            //            }
             //        }
             //    }
             //    catch (Exception e)
