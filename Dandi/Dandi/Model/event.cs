@@ -85,13 +85,13 @@ namespace Dandi.Model
             }
         }
 
-        private int _channelid;
+        private int _channelId;
         public int ChannelId
         {
-            get => _channelid;
+            get => _channelId;
             set
             {
-                SetProperty(ref _channelid, value);
+                SetProperty(ref _channelId, value);
             }
         }
 

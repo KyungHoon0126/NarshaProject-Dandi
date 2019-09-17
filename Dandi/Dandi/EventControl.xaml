@@ -14,7 +14,6 @@
         <Button Grid.Row="0" Click="Button_Click" />
 
         <ListView Grid.Row="1" x:Name="test" ItemsSource="{Binding EventItems}">
-           
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -42,4 +41,5 @@
             </ListView.ItemTemplate>
         </ListView>
     </Grid>
+    
 </UserControl>
