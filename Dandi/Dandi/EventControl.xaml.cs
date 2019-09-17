@@ -29,16 +29,14 @@ namespace Dandi
             this.DataContext = eventView;
         }
 
-        // 분노의 일정 테스트
-        public async void AA()
+        public async void ReceiveEvent()
         {
             await eventView.SetEventList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AA();
-
+            ReceiveEvent();
         }
     }
 }

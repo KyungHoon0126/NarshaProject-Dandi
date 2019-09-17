@@ -31,6 +31,9 @@ namespace Dandi.ViewModel
             TResponse<EventResponse> resp;
 
 #pragma warning disable IDE0059 // Unnecessary assignment of a value
+            
+            // channel 아이디를 직접 지정해주면 안된다. 생각해보기
+
             resp = await networkManager.GetResponse<EventResponse>("channel-event?channel_id=4", Method.GET, null);
 #pragma warning restore IDE0059 // Unnecessary assignment of a value
 
@@ -45,7 +48,7 @@ namespace Dandi.ViewModel
                 }
                 catch (Exception e)
                 {
-                    Debug.WriteLine("Bus LoadDataAsync ERROR : " + e.Message);
+                    Debug.WriteLine("Event LoadDataAsync ERROR : " + e.Message);
                 }
             }
         }

@@ -52,7 +52,7 @@ namespace Dandi
 
                 MessageBox.Show("로그인에 성공하셨습니다.");
 
-                ctrlLogin.Visibility = Visibility.Hidden;
+                ctrlLogin.Visibility = Visibility.Collapsed;
                 ctrlEvent.Visibility = Visibility.Visible;
 
                 // MainHome_Loaded();

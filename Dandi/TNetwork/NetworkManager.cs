@@ -123,7 +123,6 @@ namespace TNetwork
         private static RestClient CreateClient()
         {
              var restClient = new RestClient("http://10.80.161.223:5000") { Timeout = Options.timeOut };
-            // var restClient = new RestClient("http://10.80.162.191:5000") { Timeout = Options.timeOut };
             return restClient;
         }
 
