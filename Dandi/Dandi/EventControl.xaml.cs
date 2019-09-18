@@ -21,22 +21,10 @@ namespace Dandi
     /// </summary>
     public partial class EventControl : UserControl
     {
-        public EventViewModel eventView = new EventViewModel();
-
         public EventControl()
         {
             InitializeComponent();
-            this.DataContext = eventView;
-        }
-
-        public async void ReceiveEvent()
-        {
-            await eventView.SetEventList();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ReceiveEvent();
+            this.DataContext = App.eventViewModel;
         }
     }
 }

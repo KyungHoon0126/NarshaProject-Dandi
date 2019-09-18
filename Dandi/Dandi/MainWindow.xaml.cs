@@ -48,20 +48,23 @@ namespace Dandi
             if(success)
             {
                 // 분노의 일정 테스트
-                // AA();
+                // ReceiveEvent();
 
                 MessageBox.Show("로그인에 성공하셨습니다.");
 
                 ctrlLogin.Visibility = Visibility.Collapsed;
-                ctrlEvent.Visibility = Visibility.Visible;
+
+                // TODO - Loading Schedule Data here
+
 
                 // MainHome_Loaded();
 
-                //ctrlLogin.Visibility = Visibility.Collapsed;
-                //ctrlSchedule.Visibility = Visibility.Visible;
+                DataLoading();
+
+                ctrlSchedule.Visibility = Visibility.Visible;
                 
-                //UpdateScreen();
-                //MainWindow_Loaded();
+                UpdateScreen();
+                MainWindow_Loaded();
 
                 // ctrlMainHome.Visibility = Visibility.Collapsed;
 
@@ -85,6 +88,12 @@ namespace Dandi
             }
         }
         
+        // 일정 불러오는 함수
+        private async void DataLoading()
+        {
+            await App.eventViewModel.SetEventList();   
+        }
+
         // 바탕화면에 일정들을 나타내기 위한 함수
         private void MainWindow_Loaded()
         {

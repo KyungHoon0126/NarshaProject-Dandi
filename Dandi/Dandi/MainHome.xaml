@@ -8,10 +8,8 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        
+
         <Image Margin="0,-475,10,-181.4" Source="Assets/Image1.png" Stretch="Fill"/>
-        <local:ToggleSwitch x:Name="ctrltoggleswitch"/>
-        
     </Grid>
     
 </UserControl>

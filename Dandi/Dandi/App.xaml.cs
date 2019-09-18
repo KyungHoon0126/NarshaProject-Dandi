@@ -28,10 +28,7 @@ namespace Dandi
             Setting.Load();
         }
 
-        // ToggleSwitch
-        public static ToggleSwitch toggleswitch = new ToggleSwitch();
-
-        // Profile
-        public static Profile profile = new Profile();
+        // EventControl
+        public static EventViewModel eventViewModel = new EventViewModel();
     }
 }

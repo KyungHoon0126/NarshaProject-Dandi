@@ -80,17 +80,12 @@
     <Compile Include="MainHome.xaml.cs">
       <DependentUpon>MainHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Schedule.xaml.cs">
       <DependentUpon>Schedule.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service\Response\EventResponse.cs" />
-    <Compile Include="Profile.xaml.cs">
-      <DependentUpon>Profile.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ToggleSwitch.xaml.cs">
-      <DependentUpon>ToggleSwitch.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\EventViewModel.cs" />
     <Compile Include="W32.cs" />
     <Page Include="EventControl.xaml">
@@ -120,15 +115,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Profile.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Schedule.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ToggleSwitch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

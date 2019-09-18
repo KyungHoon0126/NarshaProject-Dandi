@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using Newtonsoft.Json;
+using Prism.Mvvm;
 using System;
 
 namespace Dandi.Model
@@ -125,6 +126,13 @@ namespace Dandi.Model
             }
         }
 
+        private Author _author;
+        public Author Author
+        {
+            get => _author;
+            set => SetProperty(ref _author, value);
+        }
+
         public object Clone()
         {
             return new Event
@@ -140,7 +148,8 @@ namespace Dandi.Model
                 ChannelId = this.ChannelId,
                 Title = this.Title,
                 StartDate = this.StartDate,
-                EndDate = this.EndDate
+                EndDate = this.EndDate,
+                Author = (Author)this.Author.Clone(),
             };
         }
     }

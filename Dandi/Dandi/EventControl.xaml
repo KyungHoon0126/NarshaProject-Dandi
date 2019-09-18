@@ -7,13 +7,8 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Button Grid.Row="0" Click="Button_Click" />
 
-        <ListView Grid.Row="1" x:Name="test" ItemsSource="{Binding EventItems}">
+        <ListView x:Name="test" ItemsSource="{Binding EventItems}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -32,8 +27,8 @@
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}" TextWrapping="Wrap"/>
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate}"/>
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding UserId}"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding UserName}"/>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId}"/>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName}"/>
                         </StackPanel>
                         <Image Grid.Column="1" Source="Assets/1.jpg" Height="80"/>
                     </Grid>
