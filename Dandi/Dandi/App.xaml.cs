@@ -26,6 +26,6 @@ namespace Dandi
         }
 
         // EventControl
-        public static EventViewModel eventViewModel = new EventViewModel();
+        public static ChannelEventViewModel eventViewModel = new ChannelEventViewModel();
     }
 }

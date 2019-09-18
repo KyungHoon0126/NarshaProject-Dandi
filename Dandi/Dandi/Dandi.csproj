@@ -78,9 +78,9 @@
       <DependentUpon>EventControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Author.cs" />
-    <Compile Include="Model\Event.cs" />
-    <Compile Include="Service\Response\EventResponse.cs" />
-    <Compile Include="ViewModel\EventViewModel.cs" />
+    <Compile Include="Model\ChannelEvent.cs" />
+    <Compile Include="Service\Response\ChannelEventResponse.cs" />
+    <Compile Include="ViewModel\ChannelEventViewModel.cs" />
     <Compile Include="W32.cs" />
     <Page Include="EventControl.xaml">
       <SubType>Designer</SubType>
