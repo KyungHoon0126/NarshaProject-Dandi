@@ -77,9 +77,6 @@
     <Compile Include="EventControl.xaml.cs">
       <DependentUpon>EventControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainHome.xaml.cs">
-      <DependentUpon>MainHome.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Schedule.xaml.cs">
@@ -93,10 +90,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LoginControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

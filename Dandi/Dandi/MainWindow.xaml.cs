@@ -47,9 +47,6 @@ namespace Dandi
         {
             if(success)
             {
-                // 분노의 일정 테스트
-                // ReceiveEvent();
-
                 MessageBox.Show("로그인에 성공하셨습니다.");
 
                 ctrlLogin.Visibility = Visibility.Collapsed;
@@ -116,16 +113,6 @@ namespace Dandi
             this.WindowState = WindowState.Maximized;
             this.WindowStyle = WindowStyle.None;
             this.Foreground = Brushes.White;
-        }
-
-        // MainHome에서 ToggleSwitch 버튼으로 일정을 나타낼지 말지 결정하는 함수
-        private void MainHome_Loaded() 
-        {
-            //// ToggleSwitch Ischecked를 여기서 어떻게 사용하지?
-            //if (ctrlMainHome.IsEnabled == true)
-            //{
-            //    ctrlMainHome.Visibility = Visibility.Visible;
-            //}
         }
 
         // 바탕화면에 일정들을 나타내기 위한 함수

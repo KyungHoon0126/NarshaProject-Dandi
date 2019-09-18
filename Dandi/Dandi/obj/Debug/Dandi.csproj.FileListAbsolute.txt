@@ -76,7 +76,6 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csprojAssemblyReferen
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.exe.config
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\EventControl.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\LoginControl.g.cs
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainHome.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainWindow.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Schedule.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\App.g.cs
@@ -85,7 +84,6 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi_MarkupCompile.cache
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi_MarkupCompile.lref
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\EventControl.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\LoginControl.baml
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainHome.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainWindow.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Schedule.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.g.resources

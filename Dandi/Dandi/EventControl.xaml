@@ -11,7 +11,7 @@
         <ListView x:Name="test" ItemsSource="{Binding EventItems}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Right"/>
                 </Style>
             </ListView.ItemContainerStyle>
 
@@ -23,12 +23,12 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding ChannelId}"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}" TextWrapping="Wrap"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate}"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId}"/>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName}"/>
+                            <TextBlock FontSize="10" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding ChannelId}"/>
+                            <TextBlock FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}" TextWrapping="Wrap"/>
+                            <TextBlock FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate}"/>
+                            <TextBlock FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
+                            <TextBlock FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
+                            <TextBlock FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>
                         </StackPanel>
                         <Image Grid.Column="1" Source="Assets/1.jpg" Height="80"/>
                     </Grid>
