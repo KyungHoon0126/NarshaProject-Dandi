@@ -1,19 +1,7 @@
 ﻿using Dandi.Common;
 using Dandi.Properties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Dandi
 {
@@ -25,16 +13,18 @@ namespace Dandi
         public LoginControl()
         {
             InitializeComponent();
-            Loaded();
+            LoginLoaded();
         }
 
-        private void Loaded()
+        private void LoginLoaded()
         {
-            this.DataContext = App.loginData.loginViewModel; // Id & Pw Binding을 하기 위함.
+            // Id & Pw Binding을 하기 위함.
+            this.DataContext = App.loginData.loginViewModel;
             IsAutoLoginChecked();
         }
 
-        private void IsAutoLoginChecked() // 자동 로그인
+        // AutoLoginChecked
+        private void IsAutoLoginChecked()
         {
             App.loginData.loginViewModel.Id = Settings.Default.userId;
             App.loginData.loginViewModel.Password = Settings.Default.userPw;
@@ -49,19 +39,21 @@ namespace Dandi
 
         private void Btnlogin_Click(object sender, RoutedEventArgs e)
         {
+            // User id, pw Saving
             Setting.SaveUserdata(tbid.Text, tbpw.Text);
 
             Settings.Default.isAutoLogin = btnAutoLogin.IsChecked.Value;
 
-             Settings.Default.ServerURL = "http://10.80.161.223:5000";
-            // Settings.Default.ServerURL = "http://10.80.162.191:5000";
+            // ServerAddress
+            Settings.Default.ServerURL = "http://10.80.161.223:5000";
 
+            // SaveFunction
             Settings.Default.Save();
 
+            // LoginServerAddress
+            App.loginData.loginViewModel.ServerAddress = "http://10.80.161.223:5000";
 
-             App.loginData.loginViewModel.ServerAddress = "http://10.80.161.223:5000";
-            // App.loginData.loginViewModel.ServerAddress = "http://10.80.162.191:5000";
-
+            // LoginFunction
             App.loginData.Login();
         }
     }

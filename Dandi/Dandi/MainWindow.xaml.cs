@@ -53,27 +53,12 @@ namespace Dandi
 
                 // TODO - Loading Schedule Data here
 
-
-                // MainHome_Loaded();
-
                 DataLoading();
 
                 ctrlEventControl.Visibility = Visibility.Visible;
                 
                 UpdateScreen();
                 MainWindow_Loaded();
-
-                // ctrlMainHome.Visibility = Visibility.Collapsed;
-
-                // 만약 ToggleSwitch가 실행된다면 바탕화면에 일정이 깔리도록
-                //if ()
-                //{
-                //    ctrlLogin.Visibility = Visibility.Collapsed;
-                //    ctrlSchedule.Visibility = Visibility.Visible;
-                //    MainHome_Loaded();
-                //    UpdateScreen();
-                //    MainWindow_Loaded();
-                //}
             }
             else
             {

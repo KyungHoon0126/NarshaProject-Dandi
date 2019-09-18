@@ -19,21 +19,4 @@ namespace Dandi.Model
             }
         }
     }
-
-    public class EventUserInformation : BindableBase
-    {
-        private string _userId = string.Empty;
-        public string UserId
-        {
-            get => _userId;
-            set => SetProperty(ref _userId, value);
-        }
-
-        private string _userName = string.Empty;
-        public string UserName
-        {
-            get => _userName;
-            set => SetProperty(ref _userName, value);
-        }
-    }
 }

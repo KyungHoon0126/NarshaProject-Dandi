@@ -11,6 +11,5 @@
 
         <local:LoginControl x:Name="ctrlLogin" Visibility="Visible"/>
         <local:EventControl x:Name="ctrlEventControl" Visibility="Collapsed"/>
-        <!--<local:Schedule x:Name="ctrlSchedule" Visibility="Collapsed"/>-->
     </Grid>
 </Window>
