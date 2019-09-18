@@ -58,7 +58,7 @@ namespace Dandi
 
                 DataLoading();
 
-                ctrlSchedule.Visibility = Visibility.Visible;
+                ctrlEventControl.Visibility = Visibility.Visible;
                 
                 UpdateScreen();
                 MainWindow_Loaded();
