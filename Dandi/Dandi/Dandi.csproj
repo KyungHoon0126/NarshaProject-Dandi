@@ -82,6 +82,7 @@
     <Compile Include="Model\ChannelEvent.cs" />
     <Compile Include="Model\SchoolEvent.cs" />
     <Compile Include="Service\Response\ChannelEventResponse.cs" />
+    <Compile Include="Service\Response\JoinedChannelResponse.cs" />
     <Compile Include="ViewModel\ChannelEventViewModel.cs" />
     <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="W32.cs" />

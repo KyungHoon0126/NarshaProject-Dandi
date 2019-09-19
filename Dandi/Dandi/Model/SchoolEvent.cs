@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dandi.Model
 {
-    public class SchoolEvent : BindableBase
+    public class SchoolEvent : BindableBase, ICloneable
     {
         private string _title = string.Empty;
         public string Title
@@ -37,6 +37,16 @@ namespace Dandi.Model
             {
                 SetProperty(ref _enddate, value);
             }
+        }
+
+        public object Clone()
+        {
+            return new SchoolEvent
+            {
+                Title = this.Title,
+                StartDate = this.StartDate,
+                EndDate = this.EndDate,
+            };
         }
     }
 }

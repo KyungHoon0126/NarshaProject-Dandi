@@ -73,7 +73,8 @@ namespace Dandi
         // 일정 불러오는 함수
         private async void DataLoading()
         {
-            await App.eventViewModel.SetEventList();   
+            // await App.eventViewModel.SetChannelEventList();   
+            await App.joinedChannelViewModel.SetJoinedChannelList();
         }
 
         // 바탕화면에 일정들을 나타내기 위한 함수

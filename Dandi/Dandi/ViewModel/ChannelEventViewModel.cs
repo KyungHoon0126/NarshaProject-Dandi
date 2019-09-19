@@ -1,4 +1,5 @@
 ﻿using Dandi.Model;
+using Dandi.Service.Response;
 using Prism.Mvvm;
 using RestSharp;
 using System;
@@ -22,15 +23,11 @@ namespace Dandi.ViewModel
 
         public NetworkManager networkManager = new NetworkManager();
 
-        public async Task SetEventList()
+        public async Task SetChannelEventList()
         {
-            TResponse<EventResponse> resp;
+            TResponse<ChannelEventResponse> resp;
 
-            // channel 아이디를 직접 지정해주면 안된다. 생각해보기
-            // foreach()
-            // {
-            resp = await networkManager.GetResponse<EventResponse>("channel-event?channel_id=2", Method.GET, null);
-            // }
+            resp = await networkManager.GetResponse<ChannelEventResponse>("channel-event?channel_id=2", Method.GET, null);
 
             if (resp != null && resp.Status == 200 && resp.Data != null)
             {
@@ -43,7 +40,7 @@ namespace Dandi.ViewModel
                 }
                 catch (Exception e)
                 {
-                    Debug.WriteLine("Event LoadDataAsync ERROR : " + e.Message);
+                    Debug.WriteLine("ChannelEvent LoadDataAsync ERROR : " + e.Message);
                 }
             }
         }

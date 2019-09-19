@@ -27,5 +27,8 @@ namespace Dandi
 
         // EventControl
         public static ChannelEventViewModel eventViewModel = new ChannelEventViewModel();
+
+        // JoinedChannelViewModel
+        public static JoinedChannelViewModel joinedChannelViewModel = new JoinedChannelViewModel();
     }
 }
