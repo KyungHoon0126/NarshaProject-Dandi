@@ -45,13 +45,13 @@ namespace Dandi
             Settings.Default.isAutoLogin = btnAutoLogin.IsChecked.Value;
 
             // ServerAddress
-            Settings.Default.ServerURL = "http://10.80.161.223:5000";
+            Settings.Default.ServerURL = "http://10.80.163.154:5000";
 
             // SaveFunction
             Settings.Default.Save();
 
             // LoginServerAddress
-            App.loginData.loginViewModel.ServerAddress = "http://10.80.161.223:5000";
+            App.loginData.loginViewModel.ServerAddress = "http://10.80.163.154:5000";
 
             // LoginFunction
             App.loginData.Login();

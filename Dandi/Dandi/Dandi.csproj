@@ -78,10 +78,12 @@
       <DependentUpon>EventControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\JoinedChannel.cs" />
     <Compile Include="Model\ChannelEvent.cs" />
     <Compile Include="Model\SchoolEvent.cs" />
     <Compile Include="Service\Response\ChannelEventResponse.cs" />
     <Compile Include="ViewModel\ChannelEventViewModel.cs" />
+    <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="W32.cs" />
     <Page Include="EventControl.xaml">
       <SubType>Designer</SubType>

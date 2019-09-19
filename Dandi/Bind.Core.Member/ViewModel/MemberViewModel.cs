@@ -47,7 +47,7 @@ namespace BIND.Core.Member.ViewModel
             lock (_lock)
             {
                 // once locked, you can manipulate the collection safely from another thread
-                Items.Add((Model.Member)member.Clone());
+                Items.Add((Model.Member)member.ChannelEventClone());
             }
         }
 

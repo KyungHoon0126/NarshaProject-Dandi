@@ -94,7 +94,7 @@ namespace BIND.Core.Member.Model
 
         #endregion
 
-        public object Clone()
+        public object ChannelEventClone()
         {
             Member member = new Member();
 

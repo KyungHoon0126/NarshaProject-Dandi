@@ -78,7 +78,7 @@ namespace TNetwork
 
             if (token != null)
             {
-                restRequest.AddHeader("token", token.Token);
+                restRequest.AddHeader("x-access-token", token.Token);
             }
             return restRequest;
         }

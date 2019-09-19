@@ -129,7 +129,7 @@ namespace Dandi.Model
                 Title = this.Title,
                 StartDate = this.StartDate,
                 EndDate = this.EndDate,
-                Author = (Author)this.Author.Clone(),
+                Author = (Author)this.Author.ChannelEventClone(),
             };
         }
     }

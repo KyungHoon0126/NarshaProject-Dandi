@@ -23,7 +23,7 @@ namespace Dandi.Model
             set => SetProperty(ref _userName, value);
         }
 
-        public object Clone()
+        public object ChannelEventClone()
         {
             return new Author
             {
