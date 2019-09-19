@@ -21,28 +21,28 @@ namespace Dandi.ViewModel
             set => SetProperty(ref _eventItems, value);
         }
 
-        public NetworkManager networkManager = new NetworkManager();
+        //public NetworkManager networkManager = new NetworkManager();
 
-        public async Task SetChannelEventList()
-        {
-            TResponse<ChannelEventResponse> resp;
+        //public async Task SetChannelEventList()
+        //{
+        //    TResponse<ChannelEventResponse> resp;
 
-            resp = await networkManager.GetResponse<ChannelEventResponse>("channel-event?channel_id=2", Method.GET, null);
+        //    resp = await networkManager.GetResponse<ChannelEventResponse>("channel-event?channel_id=2", Method.GET, null);
 
-            if (resp != null && resp.Status == 200 && resp.Data != null)
-            {
-                try
-                {
-                    foreach (var item in resp.Data.Events)
-                    {
-                        EventItems.Add((ChannelEvent)item.Clone());
-                    }
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine("ChannelEvent LoadDataAsync ERROR : " + e.Message);
-                }
-            }
-        }
+        //    if (resp != null && resp.Status == 200 && resp.Data != null)
+        //    {
+        //        try
+        //        {
+        //            foreach (var item in resp.Data.Events)
+        //            {
+        //                EventItems.Add((ChannelEvent)item.Clone());
+        //            }
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            Debug.WriteLine("ChannelEvent LoadDataAsync ERROR : " + e.Message);
+        //        }
+        //    }
+        //}
     }
 }

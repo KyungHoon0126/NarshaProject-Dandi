@@ -60,6 +60,7 @@ namespace Dandi.ViewModel
             for(int i = 0; i < JoinedChannelItems.Count; i++)
             {
                 var res = await networkManager.GetResponse<ChannelEventResponse>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
+                // ChannelEventItems.Add((ChannelEvent)_channelEventItems.Clone());
             }
 
             //JoinedChannelItems.ForEach(async x =>

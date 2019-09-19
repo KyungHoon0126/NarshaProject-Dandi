@@ -12,7 +12,9 @@ namespace Dandi.Service.Response
     {
         private List<JoinedChannel> _joinedChannel;
 
+        // 케이스 상관없이 무조건 값 들어감
         [JsonProperty("joinedChannel")]
+        
         public List<JoinedChannel> JoinedChannel
         {
             get => _joinedChannel;
