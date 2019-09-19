@@ -31,8 +31,8 @@
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>-->
-
-                            <Image Grid.Column="1" Source="Assets/1.jpg" Height="80"/>
+                        </StackPanel>
+                        <Image Grid.Column="1" Source="Assets/1.jpg" Height="80"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
