@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\ChannelEvent.cs" />
+    <Compile Include="Model\SchoolEvent.cs" />
     <Compile Include="Service\Response\ChannelEventResponse.cs" />
     <Compile Include="ViewModel\ChannelEventViewModel.cs" />
     <Compile Include="W32.cs" />

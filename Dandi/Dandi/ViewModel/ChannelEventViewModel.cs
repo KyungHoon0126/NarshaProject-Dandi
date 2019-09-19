@@ -31,8 +31,10 @@ namespace Dandi.ViewModel
             TResponse<EventResponse> resp;
             
             // channel 아이디를 직접 지정해주면 안된다. 생각해보기
-
-            resp = await networkManager.GetResponse<EventResponse>("channel-event?channel_id=4", Method.GET, null);
+            // foreach()
+            // {
+                resp = await networkManager.GetResponse<EventResponse>("channel-event?channel_id=4", Method.GET, null);
+            // }
 
             if (resp != null && resp.Status == 200 && resp.Data != null)
             {
