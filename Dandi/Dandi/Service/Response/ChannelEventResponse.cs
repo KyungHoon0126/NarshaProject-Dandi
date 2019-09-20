@@ -10,13 +10,13 @@ namespace Dandi.Service.Response
 {
     public class ChannelEventResponse
     {
-        private List<ChannelEvent> _events;
-        public List<ChannelEvent> Events 
+        private List<ChannelEvents> _channelEvents;
+        public List<ChannelEvents> ChannelEvents 
         {
-            get => _events;
+            get => _channelEvents;
             set
             {
-                _events = value;
+                _channelEvents = value;
             }
         }
     }

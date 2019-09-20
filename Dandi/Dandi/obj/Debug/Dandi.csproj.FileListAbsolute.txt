@@ -74,15 +74,11 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\System.ValueTuple.xml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\bin\Debug\System.Collections.Immutable.xml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csprojAssemblyReference.cache
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.exe.config
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\EventControl.g.cs
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\LoginControl.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainWindow.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\App.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi_MarkupCompile.cache
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi_MarkupCompile.lref
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\EventControl.baml
-C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\LoginControl.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\MainWindow.baml
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.g.resources
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.Properties.Resources.resources
@@ -91,3 +87,9 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csproj.CoreCompileInp
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csproj.CopyComplete
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.exe
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.pdb
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Control\ChannelEvents\ChannelEventsControl.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Control\Login\LoginControl.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Control\SchoolEvents\SchoolEventsContorl.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Control\ChannelEvents\ChannelEventsControl.baml
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Control\Login\LoginControl.baml
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Control\SchoolEvents\SchoolEventsContorl.baml

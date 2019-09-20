@@ -26,9 +26,12 @@ namespace Dandi
         }
 
         // EventControl
-        public static ChannelEventViewModel eventViewModel = new ChannelEventViewModel();
+        public static ChannelEventsViewModel eventViewModel = new ChannelEventsViewModel();
 
-        // JoinedChannelViewModel
-        public static JoinedChannelViewModel joinedChannelViewModel = new JoinedChannelViewModel();
+        // JoinedChannelsViewModel
+        public static JoinedChannelsViewModel joinedChannelViewModel = new JoinedChannelsViewModel();
+
+        // SchooolEventsViewModel
+        public static SchoolEventsViewModel schoolEventsViewModel = new SchoolEventsViewModel();
     }
 }

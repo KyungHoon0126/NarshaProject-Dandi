@@ -74,23 +74,28 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Setting.cs" />
-    <Compile Include="EventControl.xaml.cs">
-      <DependentUpon>EventControl.xaml</DependentUpon>
+    <Compile Include="Control\ChannelEvents\ChannelEventsControl.xaml.cs">
+      <DependentUpon>ChannelEventsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\JoinedChannel.cs" />
-    <Compile Include="Model\ChannelEvent.cs" />
-    <Compile Include="Model\SchoolEvent.cs" />
+    <Compile Include="Model\ChannelEvents.cs" />
+    <Compile Include="Model\SchoolEvents.cs" />
+    <Compile Include="Control\SchoolEvents\SchoolEventsContorl.xaml.cs">
+      <DependentUpon>SchoolEventsContorl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service\Response\ChannelEventResponse.cs" />
     <Compile Include="Service\Response\JoinedChannelResponse.cs" />
-    <Compile Include="ViewModel\ChannelEventViewModel.cs" />
-    <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
+    <Compile Include="Service\Response\SchoolEventResponse.cs" />
+    <Compile Include="ViewModel\ChannelEventsViewModel.cs" />
+    <Compile Include="ViewModel\JoinedChannelsViewModel.cs" />
+    <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
     <Compile Include="W32.cs" />
-    <Page Include="EventControl.xaml">
+    <Page Include="Control\ChannelEvents\ChannelEventsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginControl.xaml">
+    <Page Include="Control\Login\LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,13 +107,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LoginControl.xaml.cs">
+    <Compile Include="Control\Login\LoginControl.xaml.cs">
       <DependentUpon>LoginControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Control\SchoolEvents\SchoolEventsContorl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -172,5 +181,6 @@
   <ItemGroup>
     <Resource Include="Assets\1.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
