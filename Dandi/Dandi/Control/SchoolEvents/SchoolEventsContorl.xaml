@@ -8,10 +8,11 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <ListView x:Name="SchoolNames" ItemsSource="{Binding SchoolEventsItems}">
+            
+            <!--SchoolEventsItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
-                <!--SchoolEventsItems 중앙 정렬-->
                 <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 </Style>
             </ListView.ItemContainerStyle>
 
@@ -23,9 +24,9 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

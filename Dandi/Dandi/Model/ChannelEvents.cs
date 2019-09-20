@@ -6,56 +6,6 @@ namespace Dandi.Model
 {
     public class ChannelEvents : BindableBase, ICloneable
     {
-        //private string _userEmail = string.Empty;
-        //public string UserEmail
-        //{
-        //    get => _userEmail;
-        //    set
-        //    {
-        //        SetProperty(ref _userEmail, value);
-        //    }
-        //}
-
-        //private string _school = string.Empty;
-        //public string School
-        //{
-        //    get => _school;
-        //    set
-        //    {
-        //        SetProperty(ref _school, value);
-        //    }
-        //}
-
-        //private int _schoolgrade;
-        //public int SchoolGrade
-        //{
-        //    get => _schoolgrade;
-        //    set
-        //    {
-        //        SetProperty(ref _schoolgrade, value);
-        //    }
-        //}
-
-        //private int _schoolclass;
-        //public int SchoolClass
-        //{
-        //    get => _schoolclass;
-        //    set
-        //    {
-        //        SetProperty(ref _schoolclass, value);
-        //    }
-        //}
-
-        //private string _profilepic = string.Empty;
-        //public string ProfilePic
-        //{
-        //    get => _profilepic;
-        //    set
-        //    {
-        //        SetProperty(ref _profilepic, value);
-        //    }
-        //}
-
         private int _id;
         public int Id
         {

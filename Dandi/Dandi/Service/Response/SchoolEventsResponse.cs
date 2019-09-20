@@ -1,4 +1,5 @@
 ﻿using Dandi.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,9 @@ namespace Dandi.Service.Response
     public class SchoolEventsResponse
     {
         private List<SchoolEvents> _schoolEvents;
+
+        [JsonProperty("events")]
+
         public List<SchoolEvents> SchoolEvents
         {
             get => _schoolEvents;
