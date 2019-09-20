@@ -1,5 +1,4 @@
 ﻿using Dandi.Model;
-using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Dandi.Service.Response
 {
-    public class ChannelEventResponse
+    public class SchoolEventsResponse
     {
-        private List<ChannelEvents> _channelEvents;
-        public List<ChannelEvents> ChannelEvents 
+        private List<SchoolEvents> _schoolEvents;
+        public List<SchoolEvents> SchoolEvents
         {
-            get => _channelEvents;
+            get => _schoolEvents;
             set
             {
-                _channelEvents = value;
+                _schoolEvents = value;
             }
         }
     }

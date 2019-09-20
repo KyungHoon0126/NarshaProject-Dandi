@@ -10,6 +10,7 @@
     <Grid>
 
         <local:LoginControl x:Name="ctrlLogin" Visibility="Visible"/>
+        <local:SchoolEventsContorl x:Name="ctrlSchoolEventsControl" Visibility="Collapsed"/>
         <local:EventControl x:Name="ctrlEventControl" Visibility="Collapsed"/>
     </Grid>
 </Window>

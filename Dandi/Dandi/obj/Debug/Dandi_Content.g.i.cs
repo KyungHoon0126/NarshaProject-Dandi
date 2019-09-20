@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bind.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/footer1.png")]
 
 

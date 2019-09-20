@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Dandi.Service.Response
 {
-    public class SchoolEventResponse
+    public class ChannelEventsResponse
     {
-        private List<SchoolEvents> _schoolEvents;
-        public List<SchoolEvents> SchoolEvents
+        private List<ChannelEvents> _channelEvents;
+        public List<ChannelEvents> ChannelEvents 
         {
-            get => _schoolEvents;
+            get => _channelEvents;
             set
             {
-                _schoolEvents = value;
+                _channelEvents = value;
             }
         }
     }

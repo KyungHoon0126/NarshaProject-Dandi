@@ -51,12 +51,14 @@ namespace Dandi
 
                 ctrlLogin.Visibility = Visibility.Collapsed;
 
-                // TODO - Loading Schedule Data here
+                // SchoolEvents
+                SchoolEventsDataLoading();
+                ctrlSchoolEventsControl.Visibility = Visibility.Visible;
 
-                DataLoading();
+                // ChannelEvents 
+                // JoinedChannelDataLoading();
+                // ctrlEventControl.Visibility = Visibility.Visible;
 
-                ctrlEventControl.Visibility = Visibility.Visible;
-                
                 UpdateScreen();
                 MainWindow_Loaded();
             }
@@ -70,8 +72,14 @@ namespace Dandi
             }
         }
         
-        // 일정 불러오는 함수
-        private async void DataLoading()
+        // 학사 일정 불러오는 함수
+        private async void SchoolEventsDataLoading()
+        {
+            await App.schoolEventsViewModel.SetSchoolEventsList();
+        }
+
+        // 채널 & 일정 불러오는 함수
+        private async void JoinedChannelDataLoading()
         {
             // await App.eventViewModel.SetChannelEventList();   
             await App.joinedChannelViewModel.SetJoinedChannelList();

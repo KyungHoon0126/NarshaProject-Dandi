@@ -84,9 +84,9 @@
     <Compile Include="Control\SchoolEvents\SchoolEventsContorl.xaml.cs">
       <DependentUpon>SchoolEventsContorl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Service\Response\ChannelEventResponse.cs" />
+    <Compile Include="Service\Response\ChannelEventsResponse.cs" />
     <Compile Include="Service\Response\JoinedChannelResponse.cs" />
-    <Compile Include="Service\Response\SchoolEventResponse.cs" />
+    <Compile Include="Service\Response\SchoolEventsResponse.cs" />
     <Compile Include="ViewModel\ChannelEventsViewModel.cs" />
     <Compile Include="ViewModel\JoinedChannelsViewModel.cs" />
     <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
@@ -161,26 +161,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Sig.png" />
+    <Resource Include="bind.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\footer1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bind.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Image1.png" />
+    <Resource Include="Assets\bg.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\1.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\Sig.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,29 +13,28 @@ namespace Dandi.ViewModel
 {
     public class ChannelEventsViewModel : BindableBase
     {
-        private ObservableCollection<ChannelEvents> _channelEventItems = new ObservableCollection<ChannelEvents>();
-
-        public ObservableCollection<ChannelEvents> ChannelEventItems
+        private ObservableCollection<ChannelEvents> _channelEventsItems = new ObservableCollection<ChannelEvents>();
+        public ObservableCollection<ChannelEvents> ChannelEventsItems
         {
-            get => _channelEventItems;
-            set => SetProperty(ref _channelEventItems, value);
+            get => _channelEventsItems;
+            set => SetProperty(ref _channelEventsItems, value);
         }
 
         //public NetworkManager networkManager = new NetworkManager();
 
-        //public async Task SetChannelEventList()
+        //public async Task SetChannelEventsList()
         //{
-        //    TResponse<ChannelEventResponse> resp;
+        //    TResponse<ChannelEventsResponse> resp;
 
-        //    resp = await networkManager.GetResponse<ChannelEventResponse>("channel-event?channel_id=2", Method.GET, null);
+        //    resp = await networkManager.GetResponse<ChannelEventsResponse>("channel-event?channel_id=2", Method.GET, null);
 
         //    if (resp != null && resp.Status == 200 && resp.Data != null)
         //    {
         //        try
         //        {
-        //            foreach (var item in resp.Data.Events)
+        //            foreach (var item in resp.Data.ChannelEvents)
         //            {
-        //                EventItems.Add((ChannelEvent)item.Clone());
+        //                ChannelEventsItems.Add((ChannelEvents)item.Clone());
         //            }
         //        }
         //        catch (Exception e)

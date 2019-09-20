@@ -53,13 +53,14 @@ namespace Dandi.ViewModel
                 }
                 catch (Exception e)
                 {
-                    Debug.WriteLine("JoinedChannelEvent LoadDataAsync ERROR : " + e.Message);
+                    Debug.WriteLine("JoinedChannelsEvent LoadDataAsync ERROR : " + e.Message);
                 }
             }
 
             for(int i = 0; i < JoinedChannelItems.Count; i++)
             {
-                var res = await networkManager.GetResponse<ChannelEventResponse>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
+                // Line 62 : breakpoint
+                var res = await networkManager.GetResponse<ChannelEventsResponse>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
                 // ChannelEventItems.Add((ChannelEvent)_channelEventItems.Clone());
             }
 

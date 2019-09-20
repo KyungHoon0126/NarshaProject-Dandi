@@ -8,8 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <ListView x:Name="test" ItemsSource="{Binding ChannelEventItems}">
+        <ListView x:Name="ChannelEvents" ItemsSource="{Binding ChannelEventItems}">
 
+            <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Right"/>
@@ -32,7 +33,7 @@
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>-->
                         </StackPanel>
-                        <Image  Grid.Column="1" Margin="-170,-687,-110,-783.4" Source="/Dandi;component/1.jpg" Height="50" Width="50"/>
+                        <Image Grid.Column="1" Margin="0,0,-280,-1470.4" Source="/Dandi;component/Assets/1.jpg" Stretch="Fill" Height="50" Width="50"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
