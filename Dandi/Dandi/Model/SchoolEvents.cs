@@ -13,30 +13,21 @@ namespace Dandi.Model
         public string Title
         {
             get => _title;
-            set
-            {
-                SetProperty(ref _title, value);
-            }
+            set => SetProperty(ref _title, value);
         }
 
         private DateTime _startdate;
         public DateTime StartDate
         {
             get => _startdate;
-            set
-            {
-                SetProperty(ref _startdate, value);
-            }
+            set => SetProperty(ref _startdate, value);
         }
 
         private DateTime _enddate;
         public DateTime EndDate
         {
             get => _enddate;
-            set
-            {
-                SetProperty(ref _enddate, value);
-            }
+            set => SetProperty(ref _enddate, value);
         }
 
         public object Clone()

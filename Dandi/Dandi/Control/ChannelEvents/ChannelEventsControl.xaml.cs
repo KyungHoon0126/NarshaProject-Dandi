@@ -24,7 +24,7 @@ namespace Dandi
         public EventControl()
         {
             InitializeComponent();
-            this.DataContext = App.eventViewModel;
+            this.DataContext = App.channeleventsViewModel;
         }
     }
 }

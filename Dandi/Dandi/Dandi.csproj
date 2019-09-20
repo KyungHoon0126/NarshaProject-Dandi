@@ -88,7 +88,7 @@
     <Compile Include="Service\Response\JoinedChannelResponse.cs" />
     <Compile Include="Service\Response\SchoolEventsResponse.cs" />
     <Compile Include="ViewModel\ChannelEventsViewModel.cs" />
-    <Compile Include="ViewModel\JoinedChannelsViewModel.cs" />
+    <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
     <Compile Include="W32.cs" />
     <Page Include="Control\ChannelEvents\ChannelEventsControl.xaml">

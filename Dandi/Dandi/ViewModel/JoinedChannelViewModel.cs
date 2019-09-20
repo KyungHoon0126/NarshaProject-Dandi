@@ -12,17 +12,13 @@ using TNetwork.Data;
 
 namespace Dandi.ViewModel
 {
-    public class JoinedChannelsViewModel : BindableBase
+    public class JoinedChannelViewModel : BindableBase
     {
         private List<JoinedChannel> _joinedChannelItems = new List<JoinedChannel>();
-
         public List<JoinedChannel> JoinedChannelItems
         {
             get => _joinedChannelItems;
-            set
-            {
-                SetProperty(ref _joinedChannelItems, value);
-            }
+            set => SetProperty(ref _joinedChannelItems, value);
         }
 
 

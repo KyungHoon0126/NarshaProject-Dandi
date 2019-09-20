@@ -8,7 +8,6 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStyle="None">
     <Grid>
-
         <local:LoginControl x:Name="ctrlLogin" Visibility="Visible"/>
         <local:SchoolEventsContorl x:Name="ctrlSchoolEventsControl" Visibility="Collapsed"/>
         <local:EventControl x:Name="ctrlEventControl" Visibility="Collapsed"/>

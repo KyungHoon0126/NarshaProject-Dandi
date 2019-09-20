@@ -13,50 +13,35 @@ namespace Dandi.Model
         public int Id
         {
             get => _id;
-            set
-            {
-                SetProperty(ref _id, value);
-            }
+            set => SetProperty(ref _id, value);
         }
 
         private string _userId = string.Empty;
         public string UserId
         {
             get => _userId;
-            set
-            {
-                SetProperty(ref _userId, value);
-            }
+            set => SetProperty(ref _userId, value);
         }
 
         private bool _isAllowed;
         public bool IsAllowed
         {
             get => _isAllowed;
-            set
-            {
-                SetProperty(ref _isAllowed, value);
-            }
+            set => SetProperty(ref _isAllowed, value);
         }
 
         private bool _pushNotify;
         public bool PushNotify
         {
             get => _pushNotify;
-            set
-            {
-                SetProperty(ref _pushNotify, value);
-            }
+            set => SetProperty(ref _pushNotify, value);
         }
 
         private string _thumbNail;
         public string ThubmNail
         {
             get => _thumbNail;
-            set
-            {
-                SetProperty(ref _thumbNail, value);
-            }
+            set => SetProperty(ref _thumbNail, value);
         }
 
         public object Clone()

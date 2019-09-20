@@ -60,50 +60,35 @@ namespace Dandi.Model
         public int Id
         {
             get => _id;
-            set
-            {
-                SetProperty(ref _id, value);
-            }
+            set => SetProperty(ref _id, value);
         }
 
         private int _channelId;
         public int ChannelId
         {
             get => _channelId;
-            set
-            {
-                SetProperty(ref _channelId, value);
-            }
+            set => SetProperty(ref _channelId, value);
         }
 
         private string _title = string.Empty;
         public string Title
         {
             get => _title;
-            set
-            {
-                SetProperty(ref _title, value);
-            }
+            set => SetProperty(ref _title, value);
         }
 
         private DateTime _startDate;
         public DateTime StartDate
         {
             get => _startDate;
-            set
-            {
-                SetProperty(ref _startDate, value);
-            }
+            set => SetProperty(ref _startDate, value);
         }
 
         private DateTime _endDate;
         public DateTime EndDate
         {
             get => _endDate;
-            set
-            {
-                SetProperty(ref _endDate, value);
-            }
+            set => SetProperty(ref _endDate, value);
         }
 
         private Author _author;
