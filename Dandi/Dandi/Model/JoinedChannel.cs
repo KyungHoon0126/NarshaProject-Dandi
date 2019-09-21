@@ -53,18 +53,11 @@ namespace Dandi.Model
             set => SetProperty(ref school_Id, value);
         }
 
-        private bool _isPublic;
-        public bool IsPublic
+        private Boolean _isPublic;
+        public Boolean IsPublic
         {
             get => _isPublic;
             set => SetProperty(ref _isPublic, IsPublic);
-        }
-
-        private DateTime _dateTime;
-        public DateTime DateTime
-        {
-            get => _dateTime;
-            set => SetProperty(ref _dateTime, value);
         }
 
         private DateTime createdAt;
@@ -74,7 +67,6 @@ namespace Dandi.Model
             set => SetProperty(ref createdAt, value);
         }
                 
-                "createdAt": datetime,
         private string _thumbNail;
         public string ThubmNail
         {
@@ -87,9 +79,13 @@ namespace Dandi.Model
             return new JoinedChannel
             {
                 Id = this.Id,
-                UserId = this.UserId,
-                IsAllowed = this.IsAllowed,
-                PushNotify = this.PushNotify,
+                Name = this.Name,
+                Explain = this.Explain,
+                Create_User = this.Create_User,
+                Color = this.Color,
+                School_Id = this.School_Id,
+                IsPublic = this.IsPublic,
+                CreatedAt = this.CreatedAt,
                 ThubmNail = this.ThubmNail
             };
         }
