@@ -9,6 +9,8 @@ namespace Dandi.Model
 {
     public class JoinedChannel : BindableBase, ICloneable
     {
+        // Channel의 JoinedChannel
+
         private int _id;
         public int Id
         {
@@ -16,27 +18,63 @@ namespace Dandi.Model
             set => SetProperty(ref _id, value);
         }
 
-        private string _userId = string.Empty;
-        public string UserId
+        private string _name;
+        public string Name
         {
-            get => _userId;
-            set => SetProperty(ref _userId, value);
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
 
-        private bool _isAllowed;
-        public bool IsAllowed
+        private string _explain = string.Empty;
+        public string Explain
         {
-            get => _isAllowed;
-            set => SetProperty(ref _isAllowed, value);
+            get => _explain;
+            set => SetProperty(ref _explain, value);
         }
 
-        private bool _pushNotify;
-        public bool PushNotify
+        private string create_User = string.Empty;
+        public string Create_User
         {
-            get => _pushNotify;
-            set => SetProperty(ref _pushNotify, value);
+            get => create_User;
+            set => SetProperty(ref create_User, value);
         }
 
+        private string _color = string.Empty;
+        public string Color
+        {
+            get => _color;
+            set => SetProperty(ref _color, value);
+        }
+
+        private string school_Id = string.Empty;
+        public string School_Id
+        {
+            get => school_Id;
+            set => SetProperty(ref school_Id, value);
+        }
+
+        private bool _isPublic;
+        public bool IsPublic
+        {
+            get => _isPublic;
+            set => SetProperty(ref _isPublic, IsPublic);
+        }
+
+        private DateTime _dateTime;
+        public DateTime DateTime
+        {
+            get => _dateTime;
+            set => SetProperty(ref _dateTime, value);
+        }
+
+        private DateTime createdAt;
+        public DateTime CreatedAt
+        {
+            get => createdAt;
+            set => SetProperty(ref createdAt, value);
+        }
+                
+                "createdAt": datetime,
         private string _thumbNail;
         public string ThubmNail
         {

@@ -9,6 +9,8 @@ namespace Dandi.Model
 {
     public class Author : BindableBase, ICloneable
     {
+        // Channel - Event의 Events의 Author
+
         private string _userId = string.Empty;
         public string UserId
         {
