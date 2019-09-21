@@ -77,17 +77,19 @@
     <Compile Include="Control\ChannelEvents\ChannelEventsControl.xaml.cs">
       <DependentUpon>ChannelEventsControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\channel.cs" />
+    <Compile Include="Model\ChannelSchedule.cs" />
     <Compile Include="Model\JoinedChannel.cs" />
-    <Compile Include="Model\ChannelEvents.cs" />
+    <Compile Include="Model\author.cs" />
     <Compile Include="Model\SchoolEvents.cs" />
     <Compile Include="Control\SchoolEvents\SchoolEventsContorl.xaml.cs">
       <DependentUpon>SchoolEventsContorl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Service\Response\ChannelEventsResponse.cs" />
+    <Compile Include="Service\Response\channel.cs" />
+    <Compile Include="Service\Response\events.cs" />
     <Compile Include="Service\Response\JoinedChannelResponse.cs" />
     <Compile Include="Service\Response\SchoolEventsResponse.cs" />
-    <Compile Include="ViewModel\ChannelEventsViewModel.cs" />
+    <Compile Include="ViewModel\channelViewModel.cs" />
     <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
     <Compile Include="W32.cs" />

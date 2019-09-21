@@ -1,24 +1,23 @@
-﻿using Prism.Mvvm;
+﻿using Newtonsoft.Json;
+using Prism.Mvvm;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dandi.Model
 {
-    public class Author : BindableBase, ICloneable
+    public class author : BindableBase, ICloneable
     {
-        // Channel - Event의 Events의 Author
-
-        private string _userId = string.Empty;
+        // Channel - Event의 events의 author
+        
+        private string _userid;
+        [JsonProperty("user_id")]
         public string UserId
         {
-            get => _userId;
-            set => SetProperty(ref _userId, value);
+            get => _userid;
+            set => SetProperty(ref _userid, value);
         }
 
-        private string _userName = string.Empty;
+        private string _userName;
+        [JsonProperty("user_name")]
         public string UserName
         {
             get => _userName;
@@ -27,7 +26,7 @@ namespace Dandi.Model
 
         public object Clone()
         {
-            return new Author
+            return new author
             {
                 UserId = this.UserId,
                 UserName = this.UserName

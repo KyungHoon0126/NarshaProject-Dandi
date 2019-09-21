@@ -68,7 +68,7 @@ namespace Dandi.Model
         }
                 
         private string _thumbNail;
-        public string ThubmNail
+        public string ThumbNail
         {
             get => _thumbNail;
             set => SetProperty(ref _thumbNail, value);
@@ -86,7 +86,7 @@ namespace Dandi.Model
                 School_Id = this.School_Id,
                 IsPublic = this.IsPublic,
                 CreatedAt = this.CreatedAt,
-                ThubmNail = this.ThubmNail
+                ThumbNail = this.ThumbNail
             };
         }
     }

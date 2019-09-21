@@ -55,8 +55,8 @@ namespace Dandi
                 SchoolEventsDataLoading();
                 ctrlSchoolEventsControl.Visibility = Visibility.Visible;
 
-                // ChannelEvents 
-                // JoinedChannelDataLoading();
+                // ChannelEventsEvents & ChannelEventsChannel 
+                JoinedChannelDataLoading();
                 // ctrlEventControl.Visibility = Visibility.Visible;
 
                 UpdateScreen();
@@ -81,8 +81,9 @@ namespace Dandi
         // 채널 & 일정 불러오는 함수
         private async void JoinedChannelDataLoading()
         {
-            // await App.eventViewModel.SetChannelEventList();   
             await App.joinedChannelViewModel.SetJoinedChannelList();
+            // await App.channeleventseventsViewModel.SetChannelEventsEventsList();
+            // await App.channeleventschannelViewModel.SetChannelEventsChannelList();
         }
 
         // 바탕화면에 일정들을 나타내기 위한 함수
