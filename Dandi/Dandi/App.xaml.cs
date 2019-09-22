@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using BIND.Core.Login;
 using Dandi.Common;
+using Dandi.Model;
 using Dandi.ViewModel;
 
 namespace Dandi
@@ -33,5 +34,8 @@ namespace Dandi
 
         // SchooolEventsViewModel : 학사 일정
         public static SchoolEventsViewModel schoolEventsViewModel = new SchoolEventsViewModel();
+
+        // ChannelSchedule : 모든 일정
+        public static ChannelSchedule channelSchedule = new ChannelSchedule();
     }
 }

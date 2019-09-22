@@ -63,8 +63,8 @@ namespace Dandi.Service.Response
             set => SetProperty(ref _channelId, value);
         }
 
-        private author _author;
-        public author Author
+        private Author _author;
+        public Author Author
         {
             get => _author;
             set => SetProperty(ref _author, value);

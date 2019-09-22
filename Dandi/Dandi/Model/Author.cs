@@ -4,7 +4,7 @@ using System;
 
 namespace Dandi.Model
 {
-    public class author : BindableBase, ICloneable
+    public class Author : BindableBase, ICloneable
     {
         // Channel - Event의 events의 author
         
@@ -26,7 +26,7 @@ namespace Dandi.Model
 
         public object Clone()
         {
-            return new author
+            return new Author
             {
                 UserId = this.UserId,
                 UserName = this.UserName

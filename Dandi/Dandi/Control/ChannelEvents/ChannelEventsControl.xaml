@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <ListView x:Name="ChannelEvents" ItemsSource="{Binding ChannelItems}">
+        <ListView x:Name="ChannelEvents" ItemsSource="{Binding ChannelScheduleItems}">
 
             <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
@@ -27,9 +27,9 @@
                         <StackPanel>
                             <!--교체 예정-->
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Name}" TextWrapping="Wrap"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate}"/>
+                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
+                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date}"/>
+                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date}"/>
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content}"/>
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
                             <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>

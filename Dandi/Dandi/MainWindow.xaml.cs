@@ -52,12 +52,12 @@ namespace Dandi
                 ctrlLogin.Visibility = Visibility.Collapsed;
 
                 // SchoolEvents
-                SchoolEventsDataLoading();
-                ctrlSchoolEventsControl.Visibility = Visibility.Visible;
+                // SchoolEventsDataLoading();
+                // ctrlSchoolEventsControl.Visibility = Visibility.Visible;
 
                 // ChannelEventsEvents & ChannelEventsChannel 
                 JoinedChannelDataLoading();
-                // ctrlEventControl.Visibility = Visibility.Visible;
+                ctrlEventControl.Visibility = Visibility.Visible;
 
                 UpdateScreen();
                 MainWindow_Loaded();

@@ -69,7 +69,7 @@ namespace Dandi.ViewModel
                     channelSchedule.Start_Date = item.Start_Date;
                     channelSchedule.Title = item.Title;
                 }
-            }
+            } // breakpoint
 
             //JoinedChannelItems.ForEach(async x =>
             //{
