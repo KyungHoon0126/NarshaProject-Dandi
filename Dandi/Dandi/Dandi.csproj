@@ -35,7 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bind.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Icon\DANDI_logo_color_32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -163,7 +166,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bind.ico" />
+    <Resource Include="Assets\Icon\bind.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\footer1.png" />
@@ -178,7 +181,14 @@
     <Resource Include="Assets\1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Sig.png" />
+    <Resource Include="Assets\Icon\DANDI_logo_color_32x32.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\DANDI_logo_typo_white.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

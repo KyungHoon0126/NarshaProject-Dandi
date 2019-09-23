@@ -19,12 +19,12 @@ namespace Dandi
     /// <summary>
     /// Interaction logic for EventControl.xaml
     /// </summary>
-    public partial class EventControl : UserControl
+    public partial class ChannelEventsControl : UserControl
     {
-        public EventControl()
+        public ChannelEventsControl()
         {
             InitializeComponent();
-            this.DataContext = App.channelSchedule;
+            this.DataContext = App.joinedChannelViewModel;
         }
     }
 }

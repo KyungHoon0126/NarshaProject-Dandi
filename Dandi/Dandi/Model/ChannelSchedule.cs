@@ -62,7 +62,7 @@ namespace Dandi.Model
                 Start_Date = this.Start_Date,
                 End_Date = this.End_Date,
                 Content = this.Content,
-                Author = (Author)Author.Clone(),
+                Author = (Author)Author.Clone()
             };
         }
     }

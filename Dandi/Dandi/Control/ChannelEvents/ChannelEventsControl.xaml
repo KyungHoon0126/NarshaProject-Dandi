@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Dandi.EventControl"
+﻿<UserControl x:Class="Dandi.ChannelEventsControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,12 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <ListView x:Name="ChannelEvents" ItemsSource="{Binding ChannelScheduleItems}">
+        <ListView x:Name="ChannelEvents" ItemsSource="{Binding AllChannelItems}">
 
             <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 </Style>
             </ListView.ItemContainerStyle>
 
@@ -25,14 +25,13 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <!--교체 예정-->
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
-                            <TextBlock FontSize="20" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding author.UserId, StringFormat=UserId : {0}}"/>
+                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding author.UserName, StringFormat=UserName : {0}}"/>
                         </StackPanel>
                         <Image Grid.Column="1" Margin="0,0,-280,-1470.4" Source="/Dandi;component/Assets/1.jpg" Stretch="Fill" Height="50" Width="50"/>
                     </Grid>

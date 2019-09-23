@@ -31,13 +31,13 @@ namespace Dandi.ViewModel
         }
 
 
-        // 사용자가 가입한 모든 채널 조회
+        // 모든 채널 조회
         public NetworkManager networkManager = new NetworkManager();
 
         public async Task SetJoinedChannelList()
         {
-            TResponse<JoinedChannelResponse> resp;
-
+            TResponse<JoinedChannelResponse> resp = new TResponse<JoinedChannelResponse>();
+            //var 
             resp = await networkManager.GetResponse<JoinedChannelResponse>("channel", Method.GET, null);
 
             if (resp != null && resp.Status == 200 && resp.Data != null)
@@ -53,10 +53,11 @@ namespace Dandi.ViewModel
                 {
                     Debug.WriteLine("JoinedChannelsEvent LoadDataAsync ERROR : " + e.Message);
                 }
-            }
+            }   
 
+            // 사용자가 가입한 채널의 모든 일정 조회 후 Add
             for(int i = 0; i < JoinedChannelItems.Count; i++)
-            {
+            { // breakpoint
                 var res = await networkManager.GetResponse<eventes>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
 
                 ChannelSchedule channelSchedule = new ChannelSchedule();
@@ -68,6 +69,8 @@ namespace Dandi.ViewModel
                     channelSchedule.Id = item.Id;
                     channelSchedule.Start_Date = item.Start_Date;
                     channelSchedule.Title = item.Title;
+
+                    AllChannelItems.Add(channelSchedule);
                 }
             } // breakpoint
 

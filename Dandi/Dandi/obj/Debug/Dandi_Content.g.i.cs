@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/footer1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dandi_logo_color_32x32.ico")]
 
 

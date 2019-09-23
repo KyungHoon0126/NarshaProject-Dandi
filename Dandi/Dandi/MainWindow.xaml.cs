@@ -52,8 +52,8 @@ namespace Dandi
                 ctrlLogin.Visibility = Visibility.Collapsed;
 
                 // SchoolEvents
-                // SchoolEventsDataLoading();
-                // ctrlSchoolEventsControl.Visibility = Visibility.Visible;
+                SchoolEventsDataLoading();
+                ctrlSchoolEventsControl.Visibility = Visibility.Visible;
 
                 // ChannelEventsEvents & ChannelEventsChannel 
                 JoinedChannelDataLoading();

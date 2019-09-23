@@ -34,8 +34,5 @@ namespace Dandi
 
         // SchooolEventsViewModel : 학사 일정
         public static SchoolEventsViewModel schoolEventsViewModel = new SchoolEventsViewModel();
-
-        // ChannelSchedule : 모든 일정
-        public static ChannelSchedule channelSchedule = new ChannelSchedule();
     }
 }
