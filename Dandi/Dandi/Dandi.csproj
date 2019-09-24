@@ -80,7 +80,7 @@
     <Compile Include="Control\ChannelEvents\ChannelEventsControl.xaml.cs">
       <DependentUpon>ChannelEventsControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MasterControl.xaml.cs">
+    <Compile Include="Control\MasterControl\MasterControl.xaml.cs">
       <DependentUpon>MasterControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\channel.cs" />
@@ -126,7 +126,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MasterControl.xaml">
+    <Page Include="Control\MasterControl\MasterControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

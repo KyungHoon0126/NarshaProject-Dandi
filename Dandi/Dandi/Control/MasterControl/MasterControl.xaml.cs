@@ -23,6 +23,8 @@ namespace Dandi
         public MasterControl()
         {
             InitializeComponent();
+            // ctrlSchoolEventsControl.Visibility = Visibility.Visible;
+            // ctrlEventControl.Visibility = Visibility.Visible;
         }
     }
 }
