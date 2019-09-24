@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\App.xaml
-41723688542
+51114680125
 
-231620980976
+242047263474
 231591320203
-Control\ChannelEvents\ChannelEventsControl.xaml;Control\Login\LoginControl.xaml;MainWindow.xaml;Control\SchoolEvents\SchoolEventsContorl.xaml;
+Control\ChannelEvents\ChannelEventsControl.xaml;Control\Login\LoginControl.xaml;MainWindow.xaml;Control\SchoolEvents\SchoolEventsContorl.xaml;MasterControl.xaml;
 
 True
 

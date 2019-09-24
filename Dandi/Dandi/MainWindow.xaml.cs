@@ -53,11 +53,14 @@ namespace Dandi
 
                 // SchoolEvents
                 SchoolEventsDataLoading();
-                ctrlSchoolEventsControl.Visibility = Visibility.Visible;
+                // ctrlSchoolEventsControl.Visibility = Visibility.Visible;
 
                 // ChannelEventsEvents & ChannelEventsChannel 
                 JoinedChannelDataLoading();
-                ctrlEventControl.Visibility = Visibility.Visible;
+                // ctrlEventControl.Visibility = Visibility.Visible;
+
+                // MasterControl
+                ctrlMaster.Visibility = Visibility.Visible;
 
                 UpdateScreen();
                 MainWindow_Loaded();

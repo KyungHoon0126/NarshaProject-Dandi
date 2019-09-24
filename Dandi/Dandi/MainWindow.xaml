@@ -9,7 +9,8 @@
         WindowStyle="None">
     <Grid>
         <local:LoginControl x:Name="ctrlLogin" Visibility="Visible"/>
-        <local:SchoolEventsContorl x:Name="ctrlSchoolEventsControl" Visibility="Collapsed"/>
-        <local:ChannelEventsControl x:Name="ctrlEventControl" Visibility="Collapsed"/>
+        <!--<local:SchoolEventsContorl x:Name="ctrlSchoolEventsControl" Visibility="Collapsed"/>-->
+        <!--<local:ChannelEventsControl x:Name="ctrlEventControl" Visibility="Collapsed"/>-->
+        <local:MasterControl x:Name="ctrlMaster" Visibility="Collapsed"/>
     </Grid>
 </Window>

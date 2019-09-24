@@ -80,6 +80,9 @@
     <Compile Include="Control\ChannelEvents\ChannelEventsControl.xaml.cs">
       <DependentUpon>ChannelEventsControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MasterControl.xaml.cs">
+      <DependentUpon>MasterControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\channel.cs" />
     <Compile Include="Model\ChannelSchedule.cs" />
     <Compile Include="Model\JoinedChannel.cs" />
@@ -120,6 +123,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Control\SchoolEvents\SchoolEventsContorl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MasterControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
