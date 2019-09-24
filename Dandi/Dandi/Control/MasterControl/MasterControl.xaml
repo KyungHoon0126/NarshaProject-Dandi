@@ -5,13 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Dandi"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <!--<local:SchoolEventsContorl x:Name="ctrlSchoolEventsControl" Visibility="Collapsed"/>-->
-        <!--<local:ChannelEventsControl x:Name="ctrlEventControl" Visibility="Collapsed"/>-->
+             d:DesignHeight="450" d:DesignWidth="800"
+             Height="500"
+             Width="500"
+             Background = "Transparent">
 
-        <local:SchoolEventsContorl/>
-        <local:ChannelEventsControl/>
-        
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            
+        </Grid.ColumnDefinitions>
+
+        <local:SchoolEventsContorl Margin="0,0,0.4,0"/>
+        <local:ChannelEventsControl Grid.Column="5" Margin="2,0,0,0"/>
     </Grid>
+
+
+
 </UserControl>
