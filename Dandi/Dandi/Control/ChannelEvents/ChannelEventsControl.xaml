@@ -23,14 +23,14 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id}"/>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date}"/>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date}"/>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content}"/>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding author.UserId, StringFormat=UserId : {0}}"/>
-                            <TextBlock FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding author.UserName, StringFormat=UserName : {0}}"/>
+                        <StackPanel>             
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding author.UserId, StringFormat=UserId : {0}}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding author.UserName, StringFormat=UserName : {0}}"/>
                         </StackPanel>
                         <Image Grid.Column="1" Margin="0,0,-280,-1470.4" Source="/Dandi;component/Assets/1.jpg" Stretch="Fill" Height="50" Width="50"/>
                     </Grid>

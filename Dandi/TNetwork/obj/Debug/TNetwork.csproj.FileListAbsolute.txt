@@ -363,4 +363,3 @@ C:\Project\NarshaPorject_Dandi\Dandi\TNetwork\obj\Debug\TNetwork.csproj.CoreComp
 C:\Project\NarshaPorject_Dandi\Dandi\TNetwork\obj\Debug\TNetwork.csproj.CopyComplete
 C:\Project\NarshaPorject_Dandi\Dandi\TNetwork\obj\Debug\TNetwork.dll
 C:\Project\NarshaPorject_Dandi\Dandi\TNetwork\obj\Debug\TNetwork.pdb
-C:\Project\NarshaPorject_Dandi\Dandi\TNetwork\obj\Debug\TNetwork.csprojAssemblyReference.cache
