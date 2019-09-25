@@ -62,7 +62,6 @@ namespace Dandi
                 // MasterControl
                 ctrlMaster.Visibility = Visibility.Visible;
 
-               // UpdateScreen();
                 MainWindow_Loaded();
                 UpdateScreen();
             }

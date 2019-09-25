@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:Dandi"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Height="500"
-             Width="500"
+             Height="800"
+             Width="800"
              Background = "Transparent">
 
 

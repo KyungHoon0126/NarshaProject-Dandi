@@ -8,12 +8,11 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <ListView x:Name="ChannelEvents" ItemsSource="{Binding AllChannelItems}" Background="Transparent" Foreground="White">
-
+        <ListView x:Name="ChannelEvents" ItemsSource="{Binding AllChannelItems}" Background="Transparent" Foreground="White" BorderThickness="5" BorderBrush="SpringGreen">
             <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 </Style>
             </ListView.ItemContainerStyle>
 
