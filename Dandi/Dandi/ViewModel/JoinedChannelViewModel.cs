@@ -69,8 +69,10 @@ namespace Dandi.ViewModel
                     channelSchedule.Id = item.Id;
                     channelSchedule.Start_Date = item.Start_Date;
                     channelSchedule.Title = item.Title;
-
+                    channelSchedule.Author.UserId = item.Author.UserId;
+                    channelSchedule.Author.UserName = item.Author.UserName;
                     AllChannelItems.Add(channelSchedule);
+                 
                 }
             } // breakpoint
 

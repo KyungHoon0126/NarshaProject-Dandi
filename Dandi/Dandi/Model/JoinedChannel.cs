@@ -74,6 +74,13 @@ namespace Dandi.Model
             set => SetProperty(ref _thumbNail, value);
         }
 
+        private Author _author = new Author();
+        public Author Author
+        {
+            get => _author;
+            set => SetProperty(ref _author, value);
+        }
+
         public object Clone()
         {
             return new JoinedChannel
@@ -86,7 +93,8 @@ namespace Dandi.Model
                 School_Id = this.School_Id,
                 IsPublic = this.IsPublic,
                 CreatedAt = this.CreatedAt,
-                ThumbNail = this.ThumbNail
+                ThumbNail = this.ThumbNail,
+                Author = (Author)Author.Clone()
             };
         }
     }
