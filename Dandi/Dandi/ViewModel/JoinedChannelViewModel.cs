@@ -30,6 +30,14 @@ namespace Dandi.ViewModel
             set => SetProperty(ref _allChannelItems, value);
         }
 
+        // AllChannelItems Index 
+        //private List<ChannelSchedule> _finalContents = new List<ChannelSchedule>();
+        //public List<ChannelSchedule> FinalContents
+        //{
+        //    get => _finalContents;
+        //    set => SetProperty(ref _finalContents, value);
+        //}
+
 
         // 모든 채널 조회
         public NetworkManager networkManager = new NetworkManager();
@@ -71,9 +79,18 @@ namespace Dandi.ViewModel
                     channelSchedule.Title = item.Title;
                     channelSchedule.Author.UserId = item.Author.UserId;
                     channelSchedule.Author.UserName = item.Author.UserName;
-                    AllChannelItems.Add(channelSchedule);
-                 
+
+                    // channelSchedule.Clone();
+                    // AllChannelItems.Add(channelSchedule);
+
+                    AllChannelItems.Add((ChannelSchedule)channelSchedule.Clone());
                 }
+
+                //for (i = AllChannelItems.Count - 5; i < AllChannelItems.Count; i++)
+                //{
+                //    FinalContents.Add(channelSchedule);
+                //}
+
             } // breakpoint
 
             //JoinedChannelItems.ForEach(async x =>
@@ -81,5 +98,12 @@ namespace Dandi.ViewModel
             //    await networkManager.GetResponse<JoinedChannelResponse>("channel-event?" + x.Id, Method.GET, null);
             //});
         }
+
+        //private List<ChannelSchedule> _finalContents = new List<ChannelSchedule>();
+        //public List<ChannelSchedule> FinalContents
+        //{
+        //    get => _finalContents;
+        //    set => SetProperty(ref _finalContents, value);
+        //}
     }
 }
