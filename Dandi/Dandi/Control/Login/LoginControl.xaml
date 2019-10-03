@@ -7,23 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
+    <!--로그인 아이디 & 패스워드 힌트 박스 스타일-->
     <UserControl.Resources>
         <Style x:Key="StyleTbx" TargetType="{x:Type TextBox}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBox}">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
-                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
-                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                               Visibility="Collapsed" Foreground="Gray" FontFamily="Arial" FontSize="9"/>
+                            <Border Background="White" 
+                                    BorderBrush="#FF7D8683" 
+                                    BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0" 
+                                          VerticalAlignment="Center" />
+                            <Label x:Name="WaterMarkLabel"
+                                   Margin="5,0,0,0"  
+                                   Content="{TemplateBinding Tag}" 
+                                   VerticalAlignment="Center"
+                                   Visibility="Collapsed" 
+                                   Foreground="Gray" 
+                                   FontFamily="Arial" 
+                                   FontSize="9"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
                                     <Condition Property="Text" Value=""/>
                                 </MultiTrigger.Conditions>
-                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                                <Setter Property="Visibility" 
+                                        TargetName="WaterMarkLabel" 
+                                        Value="Visible"/>
                             </MultiTrigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -36,15 +49,53 @@
     <Grid Margin="0,10,0,-0.4">
         <Image Source="/Dandi;component/Assets/bg.png" Stretch="Fill"/>
 
-        <CheckBox x:Name="btnAutoLogin" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="40" Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="자동 로그인" Margin="303,304,407,105.6"/>
+        <CheckBox x:Name="btnAutoLogin" 
+                  VerticalContentAlignment="Center" 
+                  HorizontalContentAlignment="Center" 
+                  Height="50" Width="100" 
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center" 
+                  Content="자동 로그인" 
+                  Margin="-90,205,0,0"/>
 
-        <Button x:Name="btnlogin" Content="로그인" Margin="417,238,261,145.6" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="66" Width="122" Click="Btnlogin_Click"/>
-        <TextBox x:Name="tbpw" Style="{StaticResource StyleTbx}" Tag="비밀번호" Text="{Binding Password}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="303,271,383,145.6"/>
-        <TextBox  x:Name="tbid" Style="{StaticResource StyleTbx}" Tag="아이디" Text="{Binding Id}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="33" Width="114" Margin="303,238,383,178.6"/>
-        
-        <Image Margin="0,355,0,-0.4" Source="/Dandi;component/Assets/footer1.png" Stretch="Fill"/>
-        <Image Margin="348,73,308,232" Source="/Dandi;component/Assets/image.png" Stretch="Fill"/>
-        <Image Margin="38,10,590,342.6" Source="/Dandi;component/Assets/DANDI_logo_typo_white.png" Stretch="Fill"/>
+        <Button x:Name="btnlogin" 
+                Content="로그인" 
+                Margin="0,0,-155,-100" 
+                HorizontalAlignment="Center" 
+                HorizontalContentAlignment="Center" 
+                VerticalAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Height="66" Width="122" 
+                Click="Btnlogin_Click"/>
 
+        <TextBox  x:Name="tbid" 
+                  Style="{StaticResource StyleTbx}" 
+                  Tag="아이디" Text="{Binding Id}"
+                  VerticalContentAlignment="Center" 
+                  HorizontalContentAlignment="Center" 
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Center" 
+                  Height="33" Width="114" 
+                  Margin="-80,67,0,0"/>
+
+        <TextBox x:Name="tbpw" 
+                 Style="{StaticResource StyleTbx}" 
+                 Tag="비밀번호" Text="{Binding Password}" 
+                 VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center" 
+                 VerticalAlignment="Center" 
+                 HorizontalAlignment="Center" 
+                 Height="33" Width="114" 
+                 Margin="-80,133,0,0"/>
+
+        <Image Margin="0,355,0,-0.4" 
+               Source="/Dandi;component/Assets/footer1.png" 
+               Stretch="Fill"/>
+        <Image Margin="348,73,308,232" 
+               Source="/Dandi;component/Assets/image.png" 
+               Stretch="Fill"/>
+        <Image Margin="38,10,590,342.6"
+               Source="/Dandi;component/Assets/DANDI_logo_typo_white.png"
+               Stretch="Fill"/>
     </Grid>
 </UserControl>

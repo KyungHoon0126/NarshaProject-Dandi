@@ -32,7 +32,7 @@ namespace BIND.Core.Login.Network
             var jObj = new JObject();
             jObj["device"] = "PC";
             jObj["user_id"] = id;
-            jObj["user_pw"] = pw;
+            jObj["user_pw"] = Sha512Hash(pw);
             
             // pw = Sha512Hash(pw);
             

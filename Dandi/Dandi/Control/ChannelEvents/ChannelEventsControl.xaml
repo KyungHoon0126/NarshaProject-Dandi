@@ -26,8 +26,8 @@
                         <StackPanel>
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id, StringFormat=Id : {0}}"/>
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, StringFormat=Title : {0}}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date}"/>
+                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date, StringFormat=yyyy-MM-dd}"/>
+                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date, StringFormat=yyyy-MM-dd}"/>
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content, StringFormat=Content : {0}}"/>
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>
