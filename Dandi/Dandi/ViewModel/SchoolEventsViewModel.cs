@@ -29,8 +29,8 @@ namespace Dandi.ViewModel
         {
             TResponse<SchoolEventsResponse> resp;
 
-            resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=09", Method.GET, null);
-
+            resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=" + DateTime.Now.Month, Method.GET, null);
+            
             if (resp != null && resp.Status == 200 && resp.Data != null)
             {
                 try

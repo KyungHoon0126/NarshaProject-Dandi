@@ -91,7 +91,7 @@
         <Image Margin="0,355,0,-0.4" 
                Source="/Dandi;component/Assets/footer1.png" 
                Stretch="Fill"/>
-        <Image Margin="348,73,308,232" 
+        <Image Margin="348,73,321,232" 
                Source="/Dandi;component/Assets/image.png" 
                Stretch="Fill"/>
         <Image Margin="38,10,590,342.6"
