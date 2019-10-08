@@ -196,6 +196,8 @@
   <ItemGroup>
     <Resource Include="Assets\DANDI_logo_typo_white.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\adsfadsfadf.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

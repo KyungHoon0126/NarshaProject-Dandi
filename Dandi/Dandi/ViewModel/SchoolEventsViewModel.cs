@@ -27,7 +27,7 @@ namespace Dandi.ViewModel
 
         public async Task SetSchoolEventsList()
         {
-            TResponse<SchoolEventsResponse> resp;
+            TResponse<SchoolEventsResponse> resp = new TResponse<SchoolEventsResponse>();
 
             resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=" + DateTime.Now.Month, Method.GET, null);
             

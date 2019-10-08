@@ -7,9 +7,8 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-
-        <ListView x:Name="ChannelEvents" ItemsSource="{Binding AllChannelItems}" Background="Transparent" Foreground="White" BorderThickness="5" BorderBrush="SpringGreen">
-            <!--ChannelEventItems 중앙 정렬-->
+        <ListView x:Name="ChannelEventsEvents" ItemsSource="{Binding AllChannelScheduleItems}" Background="Transparent" Foreground="White" BorderThickness="5" BorderBrush="SpringGreen">
+            ChannelEventItems 중앙 정렬
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -32,12 +31,26 @@
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
                             <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>
                         </StackPanel>
-                        <Image Grid.Column="1" Margin="0,0,-280,-1470.4" Source="/Dandi;component/Assets/1.jpg" Stretch="Fill" Height="50" Width="50"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
     </Grid>
-    
+
+    <!--<Grid>
+        <DataGrid x:Name="ChannelEventsChannel" ItemsSource="{Binding AllChannelScheduleItems, AllChannelItems}" AutoGenerateColumns="False" SelectionMode="Single" CanUserAddRows="False" AlternationCount="2" AlternatingRowBackground="LightGray">
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock FontSize="13" FontStyle="Italic"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+        </DataGrid>
+    </Grid>-->
+
 </UserControl>

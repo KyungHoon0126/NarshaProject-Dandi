@@ -25,6 +25,7 @@ namespace Dandi
         {
             InitializeComponent();
             this.DataContext = App.joinedChannelViewModel;
+            this.DataContext = App.channelViewModel;
         }
     }
 }

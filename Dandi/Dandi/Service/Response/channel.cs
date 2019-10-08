@@ -1,5 +1,6 @@
 ﻿using Dandi.Model;
 using Newtonsoft.Json;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +9,87 @@ using System.Threading.Tasks;
 
 namespace Dandi.Service.Response
 {
+    //public class channels // events
+    //{
+    //    public List<channel> channeles;  //[0][1]
+    //}
+
+    //public class channel : BindableBase
+    //{
+    //    [JsonProperty("channel")]
+
+    //    private int _id;
+    //    [JsonProperty("id")]
+    //    public int Id
+    //    {
+    //        get => _id;
+    //        set => SetProperty(ref _id, value);
+    //    }
+
+    //    private string _name = string.Empty;
+    //    [JsonProperty("name")]
+    //    public string Name
+    //    {
+    //        get => _name;
+    //        set => SetProperty(ref _name, value);
+    //    }
+
+    //    private string _explain = string.Empty;
+    //    [JsonProperty("explain")]
+    //    public string Explain
+    //    {
+    //        get => _explain;
+    //        set => SetProperty(ref _explain, value);
+    //    }
+
+    //    private string create_User = string.Empty;
+    //    [JsonProperty("create_user")]
+    //    public string Create_User
+    //    {
+    //        get => create_User;
+    //        set => SetProperty(ref create_User, value);
+    //    }
+
+    //    private string _color = string.Empty;
+    //    [JsonProperty("color")]
+    //    public string Color
+    //    {
+    //        get => _color;
+    //        set => SetProperty(ref _color, value);
+    //    }
+
+    //    private string school_Id = string.Empty;
+    //    [JsonProperty("school_id")]
+    //    public string School_Id
+    //    {
+    //        get => school_Id;
+    //        set => SetProperty(ref school_Id, value);
+    //    }
+
+    //    private Boolean _isPublic;
+    //    [JsonProperty("isPublic")]
+    //    public Boolean IsPublic
+    //    {
+    //        get => _isPublic;
+    //        set => SetProperty(ref _isPublic, value);
+    //    }
+
+    //    public string _thumbNail = string.Empty;
+    //    [JsonProperty("thumbnail")]
+    //    public string ThumbNail
+    //    {
+    //        get => _thumbNail;
+    //        set => SetProperty(ref _thumbNail, value);
+    //    }
+    //}
+
     public class channel
     {
-        private List<Model.channel> _channel;
+        private List<channel> _channel;
 
         [JsonProperty("channel")]
 
-        public List<Model.channel> Channel
+        public List<channel> Channel
         {
             get => _channel;
             set

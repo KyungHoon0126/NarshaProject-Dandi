@@ -111,6 +111,9 @@ namespace Dandi
             this.WindowState = WindowState.Maximized;
             this.WindowStyle = WindowStyle.None;
             this.Foreground = Brushes.White;
+
+            // 윈도우 스크린의 중앙에서 시작
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         // 바탕화면에 일정들을 나타내기 위한 함수

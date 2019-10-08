@@ -43,59 +43,148 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!--LoginTextBox Style-->
+        <Style x:Key="LoginBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="Border"
+                                Padding="20 0 0 0"
+                                Background="Transparent"
+                                CornerRadius="10"
+                                BorderBrush="Transparent"
+                                BorderThickness="1" >
+                            <Grid Height="50">
+                                <Grid Margin="0 0 0 0">
+                                    <Grid Grid.Column="1" Margin="7 0 20 0">
+                                        <ScrollViewer x:Name="PART_ContentHost"
+                                                      VerticalAlignment="Center"
+                                                       Margin="0,9,0,23.6" Cursor="IBeam" Height="17"/>
+                                        <TextBlock x:Name="WaterMark" Foreground="White"
+                                                   Margin="2,12,0,23.6" FontFamily="Noto Sans CJK kr"
+                                                   VerticalAlignment="Center"
+                                                   Visibility="Collapsed"
+                                                   FontWeight="Medium"
+                                                   Text="{TemplateBinding Tag}"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="WaterMark" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+        <!--PasswordBox Style-->
+        <Style TargetType="{x:Type PasswordBox}">
+            <!--<Setter Property="local:PasswordBoxMonitor.IsMonitoring"
+              Value="True"/>-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="Border"
+                                Padding="20 0 0 0"
+                                Background="Transparent"
+                                CornerRadius="10"
+                                BorderBrush="Transparent"
+                                BorderThickness="1" >
+                            <Grid Height="50">
+                                <Grid Margin="0 0 0 0">
+
+                                    <Grid Grid.Column="1" Margin="7 0 20 0">
+                                        <ScrollViewer x:Name="PART_ContentHost"
+                                                  VerticalAlignment="Center"
+                                                  Margin="0,0,0,23.6" Cursor="IBeam"/>
+                                        <TextBlock x:Name="WaterMark" Foreground="Transparent"
+                                                   Margin="2 0 0 0" FontFamily="Noto Sans CJK kr"
+                                                   FontWeight="Medium"
+                                                   VerticalAlignment="Center"
+                                                   Visibility="Collapsed"
+                                                   Text="{TemplateBinding Tag}"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!--<Trigger Property="local:PasswordBoxMonitor.PasswordLength" Value="0">
+                                <Setter TargetName="WaterMark" Property="Visibility" Value="Visible"/>
+                            </Trigger>-->
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
 
     <Grid Margin="0,10,0,-0.4">
-        <Image Source="/Dandi;component/Assets/bg.png" Stretch="Fill"/>
+
+        <Image Margin="0,-12,-1,-4" Source="/Dandi;component/Assets/adsfadsfadf.png" Stretch="Fill"/>
 
         <CheckBox x:Name="btnAutoLogin" 
                   VerticalContentAlignment="Center" 
                   HorizontalContentAlignment="Center" 
-                  Height="50" Width="100" 
+                  Height="50" Width="90" 
                   HorizontalAlignment="Center" 
                   VerticalAlignment="Center" 
                   Content="자동 로그인" 
-                  Margin="-90,205,0,0"/>
+                  Margin="241,279,459,111"/>
 
         <Button x:Name="btnlogin" 
-                Content="로그인" 
-                Margin="0,0,-155,-100" 
+                Content="LOGIN" 
+                Margin="364,328,359,70" 
                 HorizontalAlignment="Center" 
                 HorizontalContentAlignment="Center" 
                 VerticalAlignment="Center" 
                 VerticalContentAlignment="Center" 
-                Height="66" Width="122" 
-                Click="Btnlogin_Click"/>
+                Height="42" Width="77" 
+                Click="Btnlogin_Click"
+                Background="Transparent"
+                Foreground="White"
+                BorderBrush="Transparent"
+                FontSize="20"/>
 
         <TextBox  x:Name="tbid" 
-                  Style="{StaticResource StyleTbx}" 
-                  Tag="아이디" Text="{Binding Id}"
+                  Style="{StaticResource LoginBox}"
+                  Tag="아이디를 입력하세요." Text="{Binding Id}"
                   VerticalContentAlignment="Center" 
                   HorizontalContentAlignment="Center" 
                   VerticalAlignment="Center" 
                   HorizontalAlignment="Center" 
-                  Height="33" Width="114" 
-                  Margin="-80,67,0,0"/>
+                  Height="33" Width="182" 
+                  Margin="281,165,337,242"
+                  BorderBrush="White"
+                  />
 
-        <TextBox x:Name="tbpw" 
+        <!--<TextBox x:Name="tbpw" 
                  Style="{StaticResource StyleTbx}" 
-                 Tag="비밀번호" Text="{Binding Password}" 
+                 Tag="비밀번호를 입력하세요." Text="{Binding Password}"
+                 Foreground="Black"
                  VerticalContentAlignment="Center" 
                  HorizontalContentAlignment="Center" 
                  VerticalAlignment="Center" 
                  HorizontalAlignment="Center" 
                  Height="33" Width="114" 
-                 Margin="-80,133,0,0"/>
+                 Margin="291,240,395,167"
+                 BorderBrush="White"
+                 />-->
 
-        <Image Margin="0,355,0,-0.4" 
-               Source="/Dandi;component/Assets/footer1.png" 
-               Stretch="Fill"/>
-        <Image Margin="348,73,321,232" 
-               Source="/Dandi;component/Assets/image.png" 
-               Stretch="Fill"/>
-        <Image Margin="38,10,590,342.6"
-               Source="/Dandi;component/Assets/DANDI_logo_typo_white.png"
-               Stretch="Fill"/>
+        <PasswordBox x:Name="pbpw"      
+                     Tag="비밀번호를 입력하세요." 
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     Height="33" Width="182"
+                     Margin="281,241,337,166"
+                     PasswordChar="●"
+                     />
     </Grid>
 </UserControl>

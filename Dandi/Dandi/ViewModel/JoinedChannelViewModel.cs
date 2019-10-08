@@ -22,21 +22,22 @@ namespace Dandi.ViewModel
             set => SetProperty(ref _joinedChannelItems, value);
         }
 
-        // 채널 조회 후, 사용자가 가입한 모든 채널들의 일정을 넣는 곳
-        private ObservableCollection<ChannelSchedule> _allChannelItems = new ObservableCollection<ChannelSchedule>();
-        public ObservableCollection<ChannelSchedule> AllChannelItems
+
+        // 채널 조회 후, 사용자가 가입한 모든 채널들의 events를 넣는 곳
+        private ObservableCollection<ChannelSchedule> _allChannelScheduleItems = new ObservableCollection<ChannelSchedule>();
+        public ObservableCollection<ChannelSchedule> AllChannelScheduleItems
+        {
+            get => _allChannelScheduleItems;
+            set => SetProperty(ref _allChannelScheduleItems, value);
+        }
+
+        // 채널 조회 후, 사용자가 가입한 모든 채널들의 일정의 channel 정보를 넣는 곳
+        private ObservableCollection<Model.channel> _allChannelItems = new ObservableCollection<Model.channel>();
+        public ObservableCollection<Model.channel> AllChannelItems
         {
             get => _allChannelItems;
             set => SetProperty(ref _allChannelItems, value);
         }
-
-        // AllChannelItems Index 
-        //private List<ChannelSchedule> _finalContents = new List<ChannelSchedule>();
-        //public List<ChannelSchedule> FinalContents
-        //{
-        //    get => _finalContents;
-        //    set => SetProperty(ref _finalContents, value);
-        //}
 
 
         // 모든 채널 조회
@@ -80,17 +81,11 @@ namespace Dandi.ViewModel
                     channelSchedule.Author.UserId = item.Author.UserId;
                     channelSchedule.Author.UserName = item.Author.UserName;
 
-                    // channelSchedule.Clone();
+                    // channelSchedule.Clone(); 
                     // AllChannelItems.Add(channelSchedule);
 
-                    AllChannelItems.Add((ChannelSchedule)channelSchedule.Clone());
+                    AllChannelScheduleItems.Add((ChannelSchedule)channelSchedule.Clone());
                 }
-
-                //for (i = AllChannelItems.Count - 5; i < AllChannelItems.Count; i++)
-                //{
-                //    FinalContents.Add(channelSchedule);
-                //}
-
             } // breakpoint
 
             //JoinedChannelItems.ForEach(async x =>
