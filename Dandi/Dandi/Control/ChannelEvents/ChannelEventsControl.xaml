@@ -7,8 +7,11 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ListView x:Name="ChannelEventsEvents" ItemsSource="{Binding AllChannelScheduleItems}" Background="Transparent" Foreground="White" BorderThickness="5" BorderBrush="SpringGreen">
-            ChannelEventItems 중앙 정렬
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="ChannelEventsEvents" Background="Transparent" Foreground="White" BorderThickness="5" BorderBrush="SpringGreen" Margin="0,0,0,-0.4">
+            <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -23,13 +26,26 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id, StringFormat=Id : {0}}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, StringFormat=Title : {0}}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date, StringFormat=yyyy-MM-dd}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date, StringFormat=yyyy-MM-dd}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content, StringFormat=Content : {0}}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
-                            <TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>
+
+                            <!--ChannelEventChannel-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Id, StringFormat=Id : {0}}"/>-->
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Name, StringFormat=Name : {0}}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Explain, StringFormat=Explain : {0}}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Create_User, StringFormat=Create_User : {0}}"/>
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Color, StringFormat=Color : {0}}"/>-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.School_Id, StringFormat=School_Id : {0}}"/>-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.IsPublic, StringFormat=IsPublic : {0}}"/>-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.CreatedAt, StringFormat=CreatedAt : {0}}"/>-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.ThumbNail, StringFormat=ThumbNail : {0}}"/>-->
+
+                            <!--ChannelEventEvent-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id, StringFormat=Id : {0}}"/>-->
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, StringFormat=Title : {0}}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date, StringFormat=yyyy-MM-dd}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date, StringFormat=yyyy-MM-dd}"/>
+                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content, StringFormat=Content : {0}}"/>
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>-->
+                            <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>-->
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
@@ -38,19 +54,44 @@
     </Grid>
 
     <!--<Grid>
-        <DataGrid x:Name="ChannelEventsChannel" ItemsSource="{Binding AllChannelScheduleItems, AllChannelItems}" AutoGenerateColumns="False" SelectionMode="Single" CanUserAddRows="False" AlternationCount="2" AlternatingRowBackground="LightGray">
-            <DataTemplate>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel>
-                        <TextBlock FontSize="13" FontStyle="Italic"/>
-                    </StackPanel>
-                </Grid>
-            </DataTemplate>
-        </DataGrid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <DataGrid x:Name="ChannelEventsEvents" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
+                  VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"
+                  EnableColumnVirtualization="True" EnableRowVirtualization="True"
+                  ItemsSource="{Binding AllChannelScheduleItems}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"  Binding="{Binding Id, StringFormat=Id : {0}}"/>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title, StringFormat=Title : {0}}"/>
+                    <DataGridTextColumn Header="Start_Date" Binding="{Binding Starte_Date, StringFormat=yyyy-MM-dd}"/>
+                    <DataGridTextColumn Header="Start_Date" Binding="{Binding End_Date, StringFormat=yyyy-MM-dd}"/>
+                    <DataGridTextColumn Header="Content" Binding="{Binding Content, StringFormat=Content : {0}}"/>
+                    <DataGridTextColumn Header="Author.UserId" Binding="{Binding Author.UserId, StringFormat=UserId : {0}}"/>
+                    <DataGridTextColumn Header="Author.UserName" Binding="{Binding Author.UserName, StringFormat=UserId : {0}}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        
+        <StackPanel>
+            <DataGrid x:Name="ChannelEventsChannel" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
+                  VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"
+                  EnableColumnVirtualization="True" EnableRowVirtualization="True"
+                  ItemsSource="{Binding ChannelItems}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"  Binding="{Binding Id, StringFormat=Id : {0}}"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name, StringFormat=Name : {0}}"/>
+                    <DataGridTextColumn Header="Explain" Binding="{Binding Explain, StringFormat=Explain : {0}}"/>
+                    <DataGridTextColumn Header="Create_User" Binding="{Binding Create_User, StringFormat=Create_User : {0}}"/>
+                    <DataGridTextColumn Header="Color" Binding="{Binding Color, StringFormat=Color : {0}}"/>
+                    <DataGridTextColumn Header="School_Id" Binding="{Binding School_Id, StringFormat=School_Id : {0}}"/>
+                    <DataGridTextColumn Header="IsPublic" Binding="{Binding IsPublic, StringFormat=IsPublic : {0}}"/>
+                    <DataGridTextColumn Header="CreatedAt" Binding="{Binding CreatedAt, StringFormat=CreatedAt : {0}}"/>
+                    <DataGridTextColumn Header="ThumbNail" Binding="{Binding ThumbNail, StringFormat=ThumbNail : {0}}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>-->
-
 </UserControl>

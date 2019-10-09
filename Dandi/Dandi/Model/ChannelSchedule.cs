@@ -53,6 +53,13 @@ namespace Dandi.Model
             set => SetProperty(ref _author, value);
         }
 
+        private channel _channel = new channel();
+        public channel Channel
+        {
+            get => _channel;
+            set => SetProperty(ref _channel, value);
+        }
+
         public object Clone()
         {
             return new ChannelSchedule
@@ -62,7 +69,8 @@ namespace Dandi.Model
                 Start_Date = this.Start_Date,
                 End_Date = this.End_Date,
                 Content = this.Content,
-                Author = (Author)Author.Clone()
+                Author = (Author)Author.Clone(),
+                Channel = (channel)Channel.Clone()
             };
         }
     }

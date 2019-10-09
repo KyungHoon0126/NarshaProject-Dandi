@@ -55,14 +55,6 @@ namespace Dandi.Service.Response
             set => SetProperty(ref _content, value);
         }
 
-        private int _channelId;
-        [JsonProperty("channel_id")]
-        public int ChannelId
-        {
-            get => _channelId;
-            set => SetProperty(ref _channelId, value);
-        }
-
         private Author _author;
         public Author Author
         {

@@ -46,7 +46,7 @@ namespace Dandi.ViewModel
         public async Task SetJoinedChannelList()
         {
             TResponse<JoinedChannelResponse> resp = new TResponse<JoinedChannelResponse>();
-            //var 
+            
             resp = await networkManager.GetResponse<JoinedChannelResponse>("channel", Method.GET, null);
 
             if (resp != null && resp.Status == 200 && resp.Data != null)
@@ -73,6 +73,7 @@ namespace Dandi.ViewModel
 
                 foreach (var item in res.Data.events)
                 {
+                    // ChannelEventEvents
                     channelSchedule.Content = item.Content;
                     channelSchedule.End_Date = item.End_Date;
                     channelSchedule.Id = item.Id;
@@ -81,8 +82,17 @@ namespace Dandi.ViewModel
                     channelSchedule.Author.UserId = item.Author.UserId;
                     channelSchedule.Author.UserName = item.Author.UserName;
 
-                    // channelSchedule.Clone(); 
-                    // AllChannelItems.Add(channelSchedule);
+
+                    // ChannelEventChannel
+                    channelSchedule.Channel.Id = item.Channel.Id;
+                    channelSchedule.Channel.Name = item.Channel.Name;
+                    channelSchedule.Channel.Explain = item.Channel.Explain;
+                    channelSchedule.Channel.Create_User = item.Channel.Create_User;
+                    channelSchedule.Channel.Color = item.Channel.Color;
+                    channelSchedule.Channel.School_Id = item.Channel.School_Id;
+                    channelSchedule.Channel.IsPublic = item.Channel.IsPublic;
+                    channelSchedule.Channel.CreatedAt = item.Channel.CreatedAt;
+                    channelSchedule.Channel.ThumbNail = item.Channel.ThumbNail;
 
                     AllChannelScheduleItems.Add((ChannelSchedule)channelSchedule.Clone());
                 }
@@ -93,12 +103,5 @@ namespace Dandi.ViewModel
             //    await networkManager.GetResponse<JoinedChannelResponse>("channel-event?" + x.Id, Method.GET, null);
             //});
         }
-
-        //private List<ChannelSchedule> _finalContents = new List<ChannelSchedule>();
-        //public List<ChannelSchedule> FinalContents
-        //{
-        //    get => _finalContents;
-        //    set => SetProperty(ref _finalContents, value);
-        //}
     }
 }

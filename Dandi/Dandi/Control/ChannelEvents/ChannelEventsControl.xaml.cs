@@ -24,8 +24,8 @@ namespace Dandi
         public ChannelEventsControl()
         {
             InitializeComponent();
-            this.DataContext = App.joinedChannelViewModel;
-            this.DataContext = App.channelViewModel;
+            // this.DataContext = App.joinedChannelViewModel;
+            ChannelEventsEvents.ItemsSource = App.joinedChannelViewModel.AllChannelScheduleItems;
         }
     }
 }

@@ -47,12 +47,11 @@ namespace Dandi
         // 로그인 버튼 클릭 함수
         private void Btnlogin_Click(object sender, RoutedEventArgs e)
         {
+            // Binding을 하지 않았기 때문에 변수에 담아서 넘긴다.
             string temp = pbpw.Password;
 
             // tbid와 tbpw에 입력된 아이디 & 비밀번호를 저장한다.
             Setting.SaveUserdata(tbid.Text, temp);
-
-            Debug.WriteLine(pbpw.Password);
 
             // ?
             Settings.Default.isAutoLogin = btnAutoLogin.IsChecked.Value;
