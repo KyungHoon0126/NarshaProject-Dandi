@@ -24,9 +24,9 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
-                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate, StringFormat=yyyy-MM-dd}"/>
-                            <TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate, StringFormat=yyyy-MM-dd}"/>
+                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title}"/>
+                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding StartDate, StringFormat=yyyy-MM-dd}"/>
+                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding EndDate, StringFormat=yyyy-MM-dd}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
