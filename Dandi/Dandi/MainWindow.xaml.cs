@@ -64,6 +64,8 @@ namespace Dandi
 
                 MainWindow_Loaded();
                 UpdateScreen();
+
+                SettingWindow.Instance.Show();
             }
             else
             {

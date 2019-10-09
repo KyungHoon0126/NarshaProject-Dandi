@@ -95,6 +95,9 @@
     <Compile Include="Service\Response\events.cs" />
     <Compile Include="Service\Response\JoinedChannelResponse.cs" />
     <Compile Include="Service\Response\SchoolEventsResponse.cs" />
+    <Compile Include="SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\channelViewModel.cs" />
     <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
@@ -127,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Control\MasterControl\MasterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,6 +205,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\adsfadsfadf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\노란제일큰배경.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\비밀번호를입력하세요.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

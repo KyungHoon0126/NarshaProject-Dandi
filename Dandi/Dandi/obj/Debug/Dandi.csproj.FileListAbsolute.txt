@@ -95,3 +95,5 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csproj.CoreCompileInp
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.csproj.CopyComplete
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.exe
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.pdb
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\SettingWindow.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\SettingWindow.baml

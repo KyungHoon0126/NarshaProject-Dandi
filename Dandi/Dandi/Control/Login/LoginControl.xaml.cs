@@ -45,7 +45,7 @@ namespace Dandi
         }
 
         // 로그인 버튼 클릭 함수
-        private void Btnlogin_Click(object sender, RoutedEventArgs e)
+        private void LoginBtnlogin_Click(object sender, RoutedEventArgs e)
         {
             // Binding을 하지 않았기 때문에 변수에 담아서 넘긴다.
             string temp = pbpw.Password;
@@ -123,6 +123,18 @@ namespace Dandi
                     return;
                 }
                 SetPasswordLength(pb, pb.Password.Length);
+            }
+        }
+
+        private void Pbpw_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if(pbpw.Password.Length == 0)
+            {
+                pbpw.Background.Opacity = 1;
+            }
+            else
+            {
+                pbpw.Background.Opacity = 0;
             }
         }
 

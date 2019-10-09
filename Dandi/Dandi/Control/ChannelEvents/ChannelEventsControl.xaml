@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="ChannelEventsEvents" Background="Transparent" Foreground="White" BorderThickness="5" BorderBrush="SpringGreen" Margin="0,0,0,-0.4">
+        <ListView x:Name="ChannelEventsEvents" Background="#f2b705" Foreground="White" BorderThickness="0" BorderBrush="#f2b705" Margin="0,0,0,-0.4">
             <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -29,8 +29,8 @@
 
                             <!--ChannelEventChannel-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Id, StringFormat=Id : {0}}"/>-->
-                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Name, StringFormat=채널명 : {0}}"/>
-                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Explain}"/>
+                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Name, StringFormat=채널명 : {0}}"/>
+                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Explain}"/>
                             <!--<TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Create_User, StringFormat=Create_User : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Color, StringFormat=Color : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.School_Id, StringFormat=School_Id : {0}}"/>-->
@@ -40,10 +40,10 @@
 
                             <!--ChannelEventEvent-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id, StringFormat=Id : {0}}"/>-->
-                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, StringFormat=제목 : {0}}"/>
-                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date, StringFormat=일정 시작 : yyyy-MM-dd}"/>
-                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date, StringFormat=일정 종료 : yyyy-MM-dd}"/>
-                            <TextBlock FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content, StringFormat=일정 내용 : {0}}"/>
+                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, StringFormat=제목 : {0}}"/>
+                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content, StringFormat=일정 내용 : {0}}"/>
+                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date, StringFormat=일정 시작 : yyyy년 MM월 dd일}"/>
+                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date, StringFormat=일정 종료 : yyyy년 MM월 dd일}"/>
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>-->
                         </StackPanel>
@@ -53,6 +53,9 @@
         </ListView>
     </Grid>
 
+    
+    <!--DataGrid 사용 X-->
+    
     <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
