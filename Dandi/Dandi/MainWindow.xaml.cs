@@ -63,7 +63,7 @@ namespace Dandi
                 ctrlMaster.Visibility = Visibility.Visible;
 
                 // Design
-                // Title.Visibility = Visibility.Visible;
+                //Title.Visibility = Visibility.Visible;
 
                 MainWindow_Loaded();
                 UpdateScreen();
@@ -80,16 +80,6 @@ namespace Dandi
             }
         }
 
-        // 일정 동기화 함수
-        public void DataReLoading()
-        {
-            SchoolEventsDataLoading();
-            JoinedChannelDataLoading();
-            MainWindow_Loaded();
-            ctrlMaster.Visibility = Visibility.Visible;
-            UpdateScreen();
-        }
-        
         // 학사 일정 불러오는 함수
         private async void SchoolEventsDataLoading()
         {
