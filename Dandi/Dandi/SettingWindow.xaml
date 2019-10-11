@@ -6,49 +6,36 @@
         xmlns:local="clr-namespace:Dandi"
         mc:Ignorable="d"
         Title="SettingWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
 
     <Window.Resources>
-        <Style x:Key="StyleTbx" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <Border Background="White" 
-                                    BorderBrush="#FF7D8683" 
-                                    BorderThickness="1"/>
-                            <ScrollViewer x:Name="PART_ContentHost" 
-                                          Margin="5,0,0,0" 
-                                          VerticalAlignment="Center" />
-                            <Label x:Name="WaterMarkLabel"
-                                   Margin="5,0,0,0"  
-                                   Content="{TemplateBinding Tag}" 
-                                   VerticalAlignment="Center"
-                                   Visibility="Collapsed" 
-                                   Foreground="Gray" 
-                                   FontFamily="Arial" 
-                                   FontSize="9"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="Content" Value=""/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Visibility" 
-                                        TargetName="WaterMarkLabel" 
-                                        Value="Visible"/>
-                            </MultiTrigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+        <!--Button Highlight 효과 제거, 가져다 대면 블럭지정되는 현상 제거 스타일-->
+    <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="White"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</Window.Resources>
     
     <Grid>
         <Image Margin="0,0,-0.4,0" 
                Source="Assets/노란제일큰배경.png" 
                Stretch="Fill"/>
+
+        <local:MasterControl x:Name="ctrlReWindowLoad" Visibility="Collapsed"/>
 
         <Button x:Name="btnexit" 
                 Content="EXIT" 
@@ -62,6 +49,22 @@
                 Background="Transparent"
                 Foreground="White"
                 BorderBrush="Transparent"
-                FontSize="20"/>
+                FontSize="20"
+                FontFamily="나눔고딕"
+                Style="{StaticResource ButtonStyle}"/>
+
+        <Button x:Name="btnDataReLoad"
+                Content="Schedule ReLoading"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Center"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Foreground="White"
+                FontSize="20"
+                Click="BtnDataLoadingClick"
+                FontFamily="나눔고딕" Margin="10,10,570.6,355" Height="55" Width="213"
+                Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </Window>

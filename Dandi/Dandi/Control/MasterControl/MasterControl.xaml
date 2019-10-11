@@ -10,7 +10,6 @@
              Width="800"
              Background = "Transparent">
 
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -19,8 +18,8 @@
 
         </Grid.ColumnDefinitions>
 
-        <local:SchoolEventsContorl Margin="0,0,0.4,0"/>
-        <local:ChannelEventsControl Margin="0.4,0,0,0" Grid.Column="2"/>
+        <local:SchoolEventsContorl Margin="0,0,246.6,0" Grid.ColumnSpan="2"/>
+        <local:ChannelEventsControl Margin="246.6,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
     </Grid>
 
 

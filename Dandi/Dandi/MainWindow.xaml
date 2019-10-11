@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dandi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="잊지말고 미루지 말고 단단히 챙기자, 내일상의 단디" Height="450" Width="800"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     
@@ -14,5 +14,6 @@
         <!--<local:SchoolEventsContorl x:Name="ctrlSchoolEventsControl" Visibility="Collapsed"/>-->
         <!--<local:ChannelEventsControl x:Name="ctrlEventControl" Visibility="Collapsed"/>-->
         <local:MasterControl x:Name="ctrlMaster" Visibility="Collapsed"/>
+        <!--<local:Design x:Name="Title" Visibility="Collapsed"/>-->
     </Grid>
 </Window>

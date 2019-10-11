@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="ChannelEventsEvents" Background="#f2b705" Foreground="White" BorderThickness="0" BorderBrush="#f2b705" Margin="0,0,0,-0.4">
+        <ListView x:Name="ChannelEventsEvents" Background="Transparent" Foreground="#f2b705" BorderThickness="0" BorderBrush="#f2b705" Margin="0,0,0,-0.4">
             <!--ChannelEventItems 중앙 정렬-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">

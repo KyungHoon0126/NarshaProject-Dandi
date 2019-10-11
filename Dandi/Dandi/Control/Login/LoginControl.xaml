@@ -86,8 +86,7 @@
 
         <!--PasswordBox Style-->
         <!--<Style TargetType="{x:Type PasswordBox}">
-            --><!--<Setter Property="local:PasswordBoxMonitor.IsMonitoring"
-              Value="True"/>--><!--
+            <Setter Property="local:PasswordBoxMonitor.IsMonitoring" Value="True"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type PasswordBox}">
@@ -115,14 +114,34 @@
                             </Grid>
                         </Border>
                         <ControlTemplate.Triggers>
-                            --><!--<Trigger Property="local:PasswordBoxMonitor.PasswordLength" Value="0">
+                            <Trigger Property="local:PasswordBoxMonitor.PasswordLength" Value="0">
                                 <Setter TargetName="WaterMark" Property="Visibility" Value="Visible"/>
-                            </Trigger>--><!--
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>-->
+
+        
+        <!--Button Highlight 효과 제거, 가져다 대면 블럭지정되는 현상 제거 스타일-->
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
 
@@ -133,7 +152,7 @@
         <CheckBox x:Name="btnAutoLogin" 
                   VerticalContentAlignment="Center" 
                   HorizontalContentAlignment="Center" 
-                  Height="50" Width="90" 
+                  Height="50" Width="80" 
                   HorizontalAlignment="Center" 
                   VerticalAlignment="Center" 
                   Content="자동 로그인" 
@@ -142,18 +161,19 @@
 
         <Button x:Name="btnlogin" 
                 Content="LOGIN" 
-                Margin="364,331,359,67" 
+                Margin="362,331,362,67" 
                 HorizontalAlignment="Center" 
                 HorizontalContentAlignment="Center" 
                 VerticalAlignment="Center" 
                 VerticalContentAlignment="Center" 
-                Height="42" Width="77" 
+                Height="42" Width="76" 
                 Click="LoginBtnlogin_Click"
                 Background="Transparent"
                 Foreground="White"
                 BorderBrush="Transparent"
                 FontSize="20"
-                FontFamily="나눔고딕"/>
+                FontFamily="나눔고딕"
+                Style="{StaticResource ButtonStyle}"/>
 
         <TextBox  x:Name="tbid" 
                   Style="{StaticResource LoginBox}"
@@ -165,7 +185,7 @@
                   Height="33" Width="182" 
                   Margin="281,164,337,243"
                   BorderBrush="White"
-                  />
+                  Foreground="White"/>
 
         <!--<TextBox x:Name="tbpw" 
                  Style="{StaticResource StyleTbx}" 
@@ -189,6 +209,7 @@
                      Height="33" Width="182"
                      Margin="281,241,337,166"
                      PasswordChar="●"
+                     Foreground="White"
                      
                      
                      Background="{StaticResource PasswordHint}"

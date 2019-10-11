@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ListView x:Name="SchoolNames" ItemsSource="{Binding SchoolEventsItems}" Background="#f2b705" Foreground="White" BorderThickness="0" BorderBrush="#f2b705">
+        <ListView x:Name="SchoolNames" ItemsSource="{Binding SchoolEventsItems}" Background="Transparent" Foreground="#f2b705" BorderThickness="0" BorderBrush="#f2b705">
             
             <!--SchoolEventsItems 중앙 정렬-->
             <ListView.ItemContainerStyle>

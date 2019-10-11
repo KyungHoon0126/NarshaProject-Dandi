@@ -39,7 +39,7 @@ namespace Dandi
         public static ChannelEventsControl channelEventsControl = new ChannelEventsControl();
         public static SchoolEventsContorl schoolEventsContorl = new SchoolEventsContorl();
 
-        // MainWindow.xaml에 호출하기 위해서 App에 올린다.
+        // MainWindow.xaml에 호출하기 위해서 App에 올린다. 
         public static MasterControl masterControl = new MasterControl();
     }
 }

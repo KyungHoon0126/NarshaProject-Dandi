@@ -83,6 +83,9 @@
     <Compile Include="Control\MasterControl\MasterControl.xaml.cs">
       <DependentUpon>MasterControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Design.xaml.cs">
+      <DependentUpon>Design.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\channel.cs" />
     <Compile Include="Model\ChannelSchedule.cs" />
     <Compile Include="Model\JoinedChannel.cs" />
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Control\Login\LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Design.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

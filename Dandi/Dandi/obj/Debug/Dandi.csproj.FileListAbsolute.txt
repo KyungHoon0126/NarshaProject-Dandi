@@ -97,3 +97,5 @@ C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.exe
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Dandi.pdb
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\SettingWindow.g.cs
 C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\SettingWindow.baml
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Design.g.cs
+C:\Project\NarshaPorject_Dandi\Dandi\Dandi\obj\Debug\Design.baml

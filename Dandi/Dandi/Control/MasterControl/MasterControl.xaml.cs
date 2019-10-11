@@ -26,5 +26,10 @@ namespace Dandi
             // ctrlSchoolEventsControl.Visibility = Visibility.Visible;
             // ctrlEventControl.Visibility = Visibility.Visible;
         }
+
+        public static explicit operator string(MasterControl v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -31,15 +31,6 @@ namespace Dandi.ViewModel
             set => SetProperty(ref _allChannelScheduleItems, value);
         }
 
-        // 채널 조회 후, 사용자가 가입한 모든 채널들의 일정의 channel 정보를 넣는 곳
-        private ObservableCollection<Model.channel> _allChannelItems = new ObservableCollection<Model.channel>();
-        public ObservableCollection<Model.channel> AllChannelItems
-        {
-            get => _allChannelItems;
-            set => SetProperty(ref _allChannelItems, value);
-        }
-
-
         // 모든 채널 조회
         public NetworkManager networkManager = new NetworkManager();
 

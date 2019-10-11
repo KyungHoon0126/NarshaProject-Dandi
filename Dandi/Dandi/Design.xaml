@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Dandi.Design"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dandi"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,200" Text="단디 프로젝트" FontWeight="SemiBold" FontSize="50" Foreground="#f2b705"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,170" Text="나르샤 프로젝트 단디 테스트 날입니다." FontWeight="Medium" FontSize="17" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,120" Text="BIND 공식 채널" FontWeight="SemiBold" FontSize="30" Foreground="#f2b705"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,90" Text="스마트 스쿨 개발팀입니다." FontWeight="Medium" FontSize="17" Foreground="White"/>
+        
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50, 50" Text="2019. 10. 10 ~ 2019. 10. 11" FontWeight="Medium" FontSize="17" Foreground="White"/>
+    </Grid>
+</UserControl>
