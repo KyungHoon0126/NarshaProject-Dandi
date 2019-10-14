@@ -23,7 +23,13 @@ namespace Dandi
         public SchoolEventsContorl()
         {
             InitializeComponent();
-            this.DataContext = App.schoolEventsViewModel;
+            // this.DataContext에 넣는것과 동일한 방법. DataContext에는 하나의 ViewModel만 바인딩 가능.
+            // 대신 xaml코드에서 Itemsource에 값을 바인딩 시켜줘야 한다.
+
+            SchoolEventsItems.ItemsSource = App.schoolEventsViewModel.SchoolEventsItems;
+
+            // this.DataContext = App.schoolEventsViewModel;
+            // ItemsSource = "{Binding SchoolEventsItems}"
         }
     }
 }

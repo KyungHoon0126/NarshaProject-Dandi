@@ -26,9 +26,6 @@ namespace Dandi
             Setting.Load();
         }
 
-        // ChannelEventsControl : 채널 이벤트 조회 events, channel
-        public static channelViewModel channelViewModel = new channelViewModel();
-
         // JoinedChannelsViewModel : 가입 채널 조회
         public static JoinedChannelViewModel joinedChannelViewModel = new JoinedChannelViewModel();
 

@@ -73,9 +73,12 @@ namespace BIND.Core.Login.ViewModel
             LoginCommand = new DelegateCommand(OnLogin);
             //_btnLoginEnabled = true;
         }
-
+        
         internal async void OnLogin()
         {
+            Debug.WriteLine("로그인 시작");
+            Console.WriteLine(Id, Password);
+            
             if (!NetworkInterface.GetIsNetworkAvailable())
             {
                 SendOnLoginResultRecievedEvent(false);
@@ -95,7 +98,7 @@ namespace BIND.Core.Login.ViewModel
             {
                 loginService.SettingHttpRequest(_serverAddress);
 
-                loginArgs = await loginService.Login(Id, Password);
+                 loginArgs = await loginService.Login(Id, Password);
             }
             catch (Exception e)
             {
@@ -114,12 +117,14 @@ namespace BIND.Core.Login.ViewModel
                 SendOnLoginResultRecievedEvent(false);
                 Desc = "로그인에 실패하였습니다!";
                 Debug.WriteLine(Desc);
+                Debug.WriteLine("끝남" + Id + Password);
             }
             else    //로그인 성공
             {
                 SendOnLoginResultRecievedEvent(true);
                 Desc = "로그인에 성공하였습니다!";
                 Debug.WriteLine(Desc);
+                Debug.WriteLine("끝남", Id, Password);
             }
             BtnLoginEnabled = true;
             ProgressRingActivated = false;

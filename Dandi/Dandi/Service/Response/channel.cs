@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+// TODO : 모델로 옮기기
+
 namespace Dandi.Service.Response
 {
     public class channels // events

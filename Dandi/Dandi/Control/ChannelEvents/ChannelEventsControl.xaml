@@ -6,12 +6,31 @@
              xmlns:local="clr-namespace:Dandi"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style x:Key="TitleTextBox" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#f2b705"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style x:Key="ContentTextBox" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <ListView x:Name="ChannelEventsEvents" Background="Transparent" Foreground="#f2b705" BorderThickness="0" BorderBrush="#f2b705" Margin="0,0,0,-0.4">
-            <!--ChannelEventItems 중앙 정렬-->
+        <ListView x:Name="ChannelEvents" Background="Transparent" BorderThickness="0" BorderBrush="#f2b705" Margin="0,0,0,-0.4">
+            
+            <!--ListView 중앙 정렬 스타일-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -21,16 +40,15 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Grid.ColumnDefinitions>
+                        <!--<Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                        </Grid.ColumnDefinitions>-->
                         <StackPanel>
-
-                            <!--ChannelEventChannel-->
+                            <!--ChannelEvent - Channel-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Id, StringFormat=Id : {0}}"/>-->
-                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Name, StringFormat=채널명 : {0}}"/>
-                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Explain}"/>
+                            <TextBlock Style="{StaticResource TitleTextBox}" Text="{Binding Channel.Name, StringFormat=채널명 : {0}}"/>
+                            <TextBlock Style="{StaticResource ContentTextBox}" Text="{Binding Channel.Explain}"/>
                             <!--<TextBlock FontSize="14" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Create_User, StringFormat=Create_User : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.Color, StringFormat=Color : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.School_Id, StringFormat=School_Id : {0}}"/>-->
@@ -38,12 +56,12 @@
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.CreatedAt, StringFormat=CreatedAt : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Channel.ThumbNail, StringFormat=ThumbNail : {0}}"/>-->
 
-                            <!--ChannelEventEvent-->
+                            <!--ChannelEvent - Event-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Id, StringFormat=Id : {0}}"/>-->
-                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, StringFormat=제목 : {0}}"/>
-                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Content, StringFormat=일정 내용 : {0}}"/>
-                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Start_Date, StringFormat=일정 시작 : yyyy년 MM월 dd일}"/>
-                            <TextBlock FontWeight="SemiBold" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding End_Date, StringFormat=일정 종료 : yyyy년 MM월 dd일}"/>
+                            <TextBlock Style="{StaticResource TitleTextBox}" Text="{Binding Title, StringFormat=제목 : {0}}"/>
+                            <TextBlock Style="{StaticResource ContentTextBox}" Text="{Binding Content, StringFormat=일정 내용 : {0}}"/>
+                            <TextBlock Style="{StaticResource ContentTextBox}" Text="{Binding Start_Date, StringFormat=일정 시작 : yyyy년 MM월 dd일}"/>
+                            <TextBlock Style="{StaticResource ContentTextBox}" Text="{Binding End_Date, StringFormat=일정 종료 : yyyy년 MM월 dd일}"/>
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserId, StringFormat=UserId : {0}}"/>-->
                             <!--<TextBlock FontSize="13" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Author.UserName, StringFormat=UserName : {0}}"/>-->
                         </StackPanel>
@@ -58,7 +76,7 @@
     
     <!--<Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />    
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel>
@@ -82,7 +100,8 @@
             <DataGrid x:Name="ChannelEventsChannel" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
                   VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"
                   EnableColumnVirtualization="True" EnableRowVirtualization="True"
-                  ItemsSource="{Binding ChannelItems}">
+                  ItemsSource="{Binding 
+    }">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id"  Binding="{Binding Id, StringFormat=Id : {0}}"/>
                     <DataGridTextColumn Header="Name" Binding="{Binding Name, StringFormat=Name : {0}}"/>
@@ -97,4 +116,5 @@
             </DataGrid>
         </StackPanel>
     </Grid>-->
+    
 </UserControl>

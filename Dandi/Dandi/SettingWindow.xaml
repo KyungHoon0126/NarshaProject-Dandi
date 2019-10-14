@@ -29,7 +29,7 @@
         </Setter>
     </Style>
 </Window.Resources>
-    
+
     <Grid>
         <Image Margin="0,0,-0.4,0" 
                Source="Assets/노란제일큰배경.png" 

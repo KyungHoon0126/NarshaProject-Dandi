@@ -121,6 +121,7 @@ namespace Dandi
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
+
         // 바탕화면에 일정들을 나타내기 위한 함수
         private void InitOnDisplaySettingChanged()
         {

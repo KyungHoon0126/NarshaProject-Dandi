@@ -14,6 +14,8 @@ namespace Dandi.ViewModel
 {
     public class JoinedChannelViewModel : BindableBase
     {
+        public static JoinedChannelViewModel Instance;
+
         // 사용자가 가입한 모든 채널 조회
         private List<JoinedChannel> _joinedChannelItems = new List<JoinedChannel>();
         public List<JoinedChannel> JoinedChannelItems
@@ -58,6 +60,7 @@ namespace Dandi.ViewModel
             // 사용자가 가입한 채널의 모든 일정 조회 후 Add
             for(int i = 0; i < JoinedChannelItems.Count; i++)
             { // breakpoint
+                // TODO : DandiService로 묶어서 호출 부문만 따로 만들기
                 var res = await networkManager.GetResponse<eventes>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
 
                 ChannelSchedule channelSchedule = new ChannelSchedule();

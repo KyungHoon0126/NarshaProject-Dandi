@@ -15,11 +15,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-
         </Grid.ColumnDefinitions>
 
-        <local:SchoolEventsContorl Margin="0,0,246.6,0" Grid.ColumnSpan="2"/>
-        <local:ChannelEventsControl Margin="246.6,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <local:SchoolEventsContorl Margin="0,0,250,0" Grid.ColumnSpan="2"/>
+        <local:ChannelEventsControl Margin="250,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
     </Grid>
 
 

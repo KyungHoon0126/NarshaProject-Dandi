@@ -101,7 +101,6 @@
     <Compile Include="SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\channelViewModel.cs" />
     <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
     <Compile Include="W32.cs" />

@@ -12,6 +12,7 @@ namespace Dandi
     /// </summary>
     public partial class LoginControl : UserControl
     {
+
         public LoginControl()
         {
             // UI 초기화
@@ -53,6 +54,8 @@ namespace Dandi
             // tbid와 tbpw에 입력된 아이디 & 비밀번호를 저장한다.
             Setting.SaveUserdata(tbid.Text, Password);
 
+            Debug.WriteLine("비밀번호 입력 완료");
+
             // ?
             Settings.Default.isAutoLogin = btnAutoLogin.IsChecked.Value;
 
@@ -68,64 +71,6 @@ namespace Dandi
             App.loginData.Login();
         }
 
-
-        public class PasswordBoxMonitor : DependencyObject
-        {
-            public static bool GetIsMonitoring(DependencyObject obj)
-            {
-                return (bool)obj.GetValue(IsMonitoringProperty);
-            }
-
-            public static void SetIsMonitoring(DependencyObject obj, bool value)
-            {
-                obj.SetValue(IsMonitoringProperty, value);
-            }
-
-            public static readonly DependencyProperty IsMonitoringProperty =
-                DependencyProperty.RegisterAttached("IsMonitoring", typeof(bool), typeof(PasswordBoxMonitor), new UIPropertyMetadata(false, OnIsMonitoringChanged));
-
-
-            public static int GetPasswordLength(DependencyObject obj)
-            {
-                return (int)obj.GetValue(PasswordLengthProperty);
-            }
-
-            public static void SetPasswordLength(DependencyObject obj, int value)
-            {
-                obj.SetValue(PasswordLengthProperty, value);
-            }
-
-            public static readonly DependencyProperty PasswordLengthProperty =
-                DependencyProperty.RegisterAttached("PasswordLength", typeof(int), typeof(PasswordBoxMonitor), new UIPropertyMetadata(0));
-
-            private static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-            {
-                var pb = d as PasswordBox;
-                if (pb == null)
-                {
-                    return;
-                }
-                if ((bool)e.NewValue)
-                {
-                    pb.PasswordChanged += PasswordChanged;
-                }
-                else
-                {
-                    pb.PasswordChanged -= PasswordChanged;
-                }
-            }
-
-            static void PasswordChanged(object sender, RoutedEventArgs e)
-            {
-                var pb = sender as PasswordBox;
-                if (pb == null)
-                {
-                    return;
-                }
-                SetPasswordLength(pb, pb.Password.Length);
-            }
-        }
-
         private void Pbpw_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if(pbpw.Password.Length == 0)
@@ -137,94 +82,152 @@ namespace Dandi
                 pbpw.Background.Opacity = 0;
             }
         }
+    }
+
+    // PasswordBox 워터마크 & 비밀번호 바인딩을 하기위해서 사용.
+    public class PasswordBoxMonitor : DependencyObject
+    {
+        public static bool GetIsMonitoring(DependencyObject obj)
+        {
+            return (bool)obj.GetValue(IsMonitoringProperty);
+        }
+
+        public static void SetIsMonitoring(DependencyObject obj, bool value)
+        {
+            obj.SetValue(IsMonitoringProperty, value);
+        }
+
+        public static readonly DependencyProperty IsMonitoringProperty =
+            DependencyProperty.RegisterAttached("IsMonitoring", typeof(bool), typeof(PasswordBoxMonitor), new UIPropertyMetadata(false, OnIsMonitoringChanged));
 
 
-        // PasswordHelper
-        //public class PasswordHelper : DependencyObject
-        //{
-        //    public static readonly DependencyProperty PasswordProperty =
-        //        DependencyProperty.RegisterAttached("Password",
-        //        typeof(string), typeof(PasswordHelper),
-        //        new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
+        public static int GetPasswordLength(DependencyObject obj)
+        {
+            return (int)obj.GetValue(PasswordLengthProperty);
+        }
 
-        //    public static readonly DependencyProperty AttachProperty =
-        //        DependencyProperty.RegisterAttached("Attach",
-        //        typeof(bool), typeof(PasswordHelper), new PropertyMetadata(false, Attach));
+        public static void SetPasswordLength(DependencyObject obj, int value)
+        {
+            obj.SetValue(PasswordLengthProperty, value);
+        }
 
-        //    private static readonly DependencyProperty IsUpdatingProperty =
-        //       DependencyProperty.RegisterAttached("IsUpdating", typeof(bool),
-        //       typeof(PasswordHelper));
+        public static readonly DependencyProperty PasswordLengthProperty =
+            DependencyProperty.RegisterAttached("PasswordLength", typeof(int), typeof(PasswordBoxMonitor), new UIPropertyMetadata(0));
+
+        private static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var pb = d as PasswordBox;
+            if (pb == null)
+            {
+                return;
+            }
+            if ((bool)e.NewValue)
+            {
+                pb.PasswordChanged += PasswordChanged;
+            }
+            else
+            {
+                pb.PasswordChanged -= PasswordChanged;
+            }
+        }
+
+        static void PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var pb = sender as PasswordBox;
+            if (pb == null)
+            {
+                return;
+            }
+            SetPasswordLength(pb, pb.Password.Length);
+        }
+    }
 
 
-        //    public static void SetAttach(DependencyObject dp, bool value)
-        //    {
-        //        dp.SetValue(AttachProperty, value);
-        //    }
+    // PasswordBox 워터마크 & 비밀번호 바인딩을 하기위해서 사용.
+    public class PasswordHelper : DependencyObject
+    {
+        public static readonly DependencyProperty PasswordProperty =
+            DependencyProperty.RegisterAttached("Password",
+            typeof(string), typeof(PasswordHelper),
+            new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
 
-        //    public static bool GetAttach(DependencyObject dp)
-        //    {
-        //        return (bool)dp.GetValue(AttachProperty);
-        //    }
+        public static readonly DependencyProperty AttachProperty =
+            DependencyProperty.RegisterAttached("Attach",
+            typeof(bool), typeof(PasswordHelper), new PropertyMetadata(false, Attach));
 
-        //    public static string GetPassword(DependencyObject dp)
-        //    {
-        //        return (string)dp.GetValue(PasswordProperty);
-        //    }
+        private static readonly DependencyProperty IsUpdatingProperty =
+           DependencyProperty.RegisterAttached("IsUpdating", typeof(bool),
+           typeof(PasswordHelper));
 
-        //    public static void SetPassword(DependencyObject dp, string value)
-        //    {
-        //        dp.SetValue(PasswordProperty, value);
-        //    }
 
-        //    private static bool GetIsUpdating(DependencyObject dp)
-        //    {
-        //        return (bool)dp.GetValue(IsUpdatingProperty);
-        //    }
+        public static void SetAttach(DependencyObject dp, bool value)
+        {
+            dp.SetValue(AttachProperty, value);
+        }
 
-        //    private static void SetIsUpdating(DependencyObject dp, bool value)
-        //    {
-        //        dp.SetValue(IsUpdatingProperty, value);
-        //    }
+        public static bool GetAttach(DependencyObject dp)
+        {
+            return (bool)dp.GetValue(AttachProperty);
+        }
 
-        //    private static void OnPasswordPropertyChanged(DependencyObject sender,
-        //        DependencyPropertyChangedEventArgs e)
-        //    {
-        //        PasswordBox passwordBox = sender as PasswordBox;
-        //        passwordBox.PasswordChanged -= PasswordChanged;
+        public static string GetPassword(DependencyObject dp)
+        {
+            return (string)dp.GetValue(PasswordProperty);
+        }
 
-        //        if (!(bool)GetIsUpdating(passwordBox))
-        //        {
-        //            passwordBox.Password = (string)e.NewValue;
-        //        }
-        //        passwordBox.PasswordChanged += PasswordChanged;
-        //    }
+        public static void SetPassword(DependencyObject dp, string value)
+        {
+            dp.SetValue(PasswordProperty, value);
+        }
 
-        //    private static void Attach(DependencyObject sender,
-        //        DependencyPropertyChangedEventArgs e)
-        //    {
-        //        PasswordBox passwordBox = sender as PasswordBox;
+        private static bool GetIsUpdating(DependencyObject dp)
+        {
+            return (bool)dp.GetValue(IsUpdatingProperty);
+        }
 
-        //        if (passwordBox == null)
-        //            return;
+        private static void SetIsUpdating(DependencyObject dp, bool value)
+        {
+            dp.SetValue(IsUpdatingProperty, value);
+        }
 
-        //        if ((bool)e.OldValue)
-        //        {
-        //            passwordBox.PasswordChanged -= PasswordChanged;
-        //        }
+        private static void OnPasswordPropertyChanged(DependencyObject sender,
+            DependencyPropertyChangedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+            passwordBox.PasswordChanged -= PasswordChanged;
 
-        //        if ((bool)e.NewValue)
-        //        {
-        //            passwordBox.PasswordChanged += PasswordChanged;
-        //        }
-        //    }
+            if (!(bool)GetIsUpdating(passwordBox))
+            {
+                passwordBox.Password = (string)e.NewValue;
+            }
+            passwordBox.PasswordChanged += PasswordChanged;
+        }
 
-        //    private static void PasswordChanged(object sender, RoutedEventArgs e)
-        //    {
-        //        PasswordBox passwordBox = sender as PasswordBox;
-        //        SetIsUpdating(passwordBox, true);
-        //        SetPassword(passwordBox, passwordBox.Password);
-        //        SetIsUpdating(passwordBox, false);
-        //    }
-        //}
+        private static void Attach(DependencyObject sender,
+            DependencyPropertyChangedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+
+            if (passwordBox == null)
+                return;
+
+            if ((bool)e.OldValue)
+            {
+                passwordBox.PasswordChanged -= PasswordChanged;
+            }
+
+            if ((bool)e.NewValue)
+            {
+                passwordBox.PasswordChanged += PasswordChanged;
+            }
+        }
+
+        private static void PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+            SetIsUpdating(passwordBox, true);
+            SetPassword(passwordBox, passwordBox.Password);
+            SetIsUpdating(passwordBox, false);
+        }
     }
 }
