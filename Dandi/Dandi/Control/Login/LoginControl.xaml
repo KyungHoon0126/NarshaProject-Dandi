@@ -105,7 +105,7 @@
                                     <Grid Grid.Column="1" Margin="7 0 20 0">
                                         <ScrollViewer x:Name="PART_ContentHost"
                                                   VerticalAlignment="Center"
-                                                  Margin="0" Cursor="IBeam"/>
+                                                  Margin="0,0,0,20" Cursor="IBeam"/>
                                         <TextBlock x:Name="WaterMark" Foreground="White"
                                                    Margin="2,0,0,23.6" FontFamily="나눔고딕"
                                                    FontWeight="Medium"
@@ -183,7 +183,7 @@
                   Style="{StaticResource LoginBox}"
                   Tag="아이디를 입력하세요." Text="{Binding Id}"
                   VerticalContentAlignment="Center" 
-                  HorizontalContentAlignment="Center" 
+                  HorizontalContentAlignment="Left" 
                   VerticalAlignment="Center" 
                   HorizontalAlignment="Center" 
                   Height="33" Width="182" 
@@ -209,7 +209,7 @@
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
+                     HorizontalContentAlignment="Left"
                      Height="33" Width="182"
                      Margin="281,241,337,166"
                      PasswordChar="●"
