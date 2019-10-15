@@ -5,30 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dandi"
         mc:Ignorable="d"
-        Title="설정창" Height="300" Width="245"
+        Title="설정창" Height="510" Width="600"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        >
 
     <Window.Resources>
         <!--Button Highlight 효과 제거, 가져다 대면 블럭지정되는 현상 제거 스타일-->
-    <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="White"></Setter>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-</Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
 
     <Grid>
         <Image Margin="0,0,-0.4,0" 
@@ -39,7 +40,6 @@
 
         <Button x:Name="btnexit" 
                 Content="EXIT" 
-                Margin="80,175,81.4,53.4" 
                 HorizontalAlignment="Center" 
                 HorizontalContentAlignment="Center" 
                 VerticalAlignment="Center" 
@@ -51,9 +51,9 @@
                 BorderBrush="Transparent"
                 FontSize="20"
                 FontFamily="나눔고딕"
-                Style="{StaticResource ButtonStyle}"/>
+                Style="{StaticResource ButtonStyle}" Margin="258,273,258.6,165.8"/>
 
-        <Button x:Name="btnDataReLoad"
+        <!--<Button x:Name="btnDataReLoad"
                 Content="Schedule ReLoading"
                 HorizontalAlignment="Center"
                 HorizontalContentAlignment="Center"
@@ -64,7 +64,51 @@
                 Foreground="White"
                 FontSize="20"
                 Click="BtnDataLoadingClick"
-                FontFamily="나눔고딕" Margin="11,10,14.4,205.4" Height="55" Width="213"
-                Style="{StaticResource ButtonStyle}"/>
+                FontFamily="나눔고딕" Margin="64,67,67,148.4" Height="55" Width="213"
+                Style="{StaticResource ButtonStyle}"/>-->
+
+
+        <TextBlock Text="Widget Setting"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontFamily="나눔고딕"
+                   FontSize="20" Margin="112,69,93,178.4"
+                   />
+
+        <ComboBox HorizontalAlignment="Center"
+                  VerticalAlignment="Center" 
+                  Margin="112,106,93,142.4"
+                  Width="139"
+                  >
+            <ComboBoxItem Content="1번 위젯" MouseDoubleClick="ComboBoxItemWidgetOne_MouseDoubleClick"/>
+            <ComboBoxItem Content="2번 위젯" MouseDoubleClick="ComboBoxItemWidgetTwo_MouseDoubleClick"/>
+            <ComboBoxItem Content="3번 위젯" MouseDoubleClick="ComboBoxItemWidgetThree_MouseDoubleClick"/>
+        </ComboBox>
+
+
+        <Menu VerticalAlignment="Top" 
+              Height="25"
+              Background="LimeGreen"
+              FontFamily="나눔고딕"
+              FontSize="13">
+
+            <MenuItem  Header="Data Reloading" 
+                       Height="30" Width="120"
+                       Foreground="White"
+                       FontFamily="나눔고딕"
+                       FontSize="15"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                
+                <MenuItem Header="학사일정 동기화"
+                          Foreground="Black"
+                          Click="BtnSchoolDataLoadingClick"/>
+                
+                <MenuItem Header="채널일정 동기화"
+                          Foreground="Black"
+                          Click="BtnChannelDataLoadingClick"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

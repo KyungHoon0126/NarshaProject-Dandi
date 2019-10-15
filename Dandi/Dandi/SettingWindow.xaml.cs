@@ -69,6 +69,9 @@ namespace Dandi
         private void BtnCloseClick(object sender, RoutedEventArgs e)
         {
             SettingWindow.Instance.Close();
+            Environment.Exit(0);
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            this.Close();
         }
 #endif 
 
@@ -89,21 +92,48 @@ namespace Dandi
         }
 #endif
 
-        // 동기화 함수
-        public void DataReLoading()
+        // 동기화
+        public void SchoolDataLoading()
         {
             App.schoolEventsViewModel.SchoolEventsItems.Clear();
             SchoolEventsDataLoading();
+        }
 
+        public void ScheduleDataLoading()
+        { 
             App.joinedChannelViewModel.JoinedChannelItems.Clear();
             App.joinedChannelViewModel.AllChannelScheduleItems.Clear();
             JoinedChannelDataLoading();
         }
 
-        // btnDataReLoad 클릭 이벤트
-        private void BtnDataLoadingClick(object sender, RoutedEventArgs e)
+
+        // 동기화 버튼 이벤트
+        private void BtnSchoolDataLoadingClick(object sender, RoutedEventArgs e)
         {
-            DataReLoading();
+            SchoolDataLoading();
+        }
+
+        private void BtnChannelDataLoadingClick(object sender, RoutedEventArgs e)
+        {
+            ScheduleDataLoading();
+        }
+
+
+        // Widget Setting 
+
+        private void ComboBoxItemWidgetOne_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void ComboBoxItemWidgetTwo_MouseDoubleClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBoxItemWidgetThree_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
