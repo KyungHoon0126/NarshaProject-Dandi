@@ -28,7 +28,10 @@
     </UserControl.Resources>
     
     <Grid>
-        <ListView x:Name="ChannelEvents" Background="Transparent" BorderThickness="0" BorderBrush="#f2b705" Margin="0,0,0,-0.4">
+        <ListView x:Name="ChannelEvents" 
+                  Background="Transparent" 
+                  BorderThickness="0"
+                  Margin="0,0,0,-0.4">
             
             <!--ListView 중앙 정렬 스타일-->
             <ListView.ItemContainerStyle>
