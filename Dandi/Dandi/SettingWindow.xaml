@@ -110,5 +110,19 @@
                           Click="BtnChannelDataLoadingClick"/>
             </MenuItem>
         </Menu>
+        <Button x:Name="btnRestoreImage" 
+            Content="Restore" 
+            HorizontalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalAlignment="Center" 
+            VerticalContentAlignment="Center" 
+            Height="42" Width="77" 
+            Click="BtnRestoreImage_Click"
+            Background="Transparent"
+            Foreground="White"
+            BorderBrush="Transparent"
+            FontSize="20"
+            FontFamily="나눔고딕"
+            Style="{StaticResource ButtonStyle}" Margin="408,273,108.6,165.8"/>
     </Grid>
 </Window>

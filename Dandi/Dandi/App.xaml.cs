@@ -20,6 +20,9 @@ namespace Dandi
         // Login
         public static LoginData loginData = new LoginData();
 
+        // 현재 사용자의 바탕화면 경로 추출
+        public static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
         // AutoLogin
         public App()
         {

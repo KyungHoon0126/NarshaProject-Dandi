@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -72,7 +73,20 @@ namespace Dandi
             Environment.Exit(0);
             System.Diagnostics.Process.GetCurrentProcess().Kill();
             this.Close();
+
+            // TODO : 프로그램 종료시 원래 이미지로 돌아가도록 고치기
+            int nResult;
+            nResult = WinAPI.SystemParametersInfo(20, 0, "C:\\Users\\user\\Desktop\\모든 파일\\모든 자료\\사진\\윈도우배경화면\\WallPaper10.jpg", 0x1);
         }
+
+        // 현재 사용자의 바탕화면 경로 추출
+        public class WinAPI
+        {
+            [DllImport("user32.dll", CharSet = CharSet.Auto)]
+            public static extern int SystemParametersInfo
+                    (int uAction, int uParam, string IpvParam, int fuWinIni);
+        }
+
 #endif 
 
 
