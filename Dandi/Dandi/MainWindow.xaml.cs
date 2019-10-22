@@ -51,18 +51,14 @@ namespace Dandi
 
                 ctrlLogin.Visibility = Visibility.Collapsed;
 
-                // SchoolEvents
+                // DataLoading
                 SchoolEventsDataLoading();
-                // ctrlSchoolEventsControl.Visibility = Visibility.Visible;
-
-                // ChannelEventsEvents & ChannelEventsChannel 
                 JoinedChannelDataLoading();
-                // ctrlEventControl.Visibility = Visibility.Visible;
 
                 // MasterControl
                 ctrlMaster.Visibility = Visibility.Visible;
 
-                // Design
+                // Design Test
                 //Title.Visibility = Visibility.Visible;
 
                 MainWindow_Loaded();
@@ -80,19 +76,18 @@ namespace Dandi
             }
         }
 
-        // 학사 일정 불러오는 함수
+        // 학사 일정을 불러오는 함수
         private async void SchoolEventsDataLoading()
         {
             await App.schoolEventsViewModel.SetSchoolEventsList();
         }
 
-        // 채널 & 일정 불러오는 함수
+        // 채널 & 일정을 불러오는 함수
         private async void JoinedChannelDataLoading()
         {
             await App.joinedChannelViewModel.SetJoinedChannelList();
-            // await App.channeleventseventsViewModel.SetChannelEventsEventsList();
-            // await App.channeleventschannelViewModel.SetChannelEventsChannelList();
         }
+
 
         // 바탕화면에 일정들을 나타내기 위한 함수
         private void MainWindow_Loaded()
@@ -101,16 +96,9 @@ namespace Dandi
             FillDisplay();
         }
 
-        // Window에서 바로 Style을 줄 수 있지만, UserControl을 이용하므로 UpdateScreen으로 효과 적용.
+
         private void UpdateScreen()
         {
-            // Background = "Transparent"
-            // ResizeMode = "NoResize"
-            // WindowState = "Maximized"
-            // WindowStyle = "None"
-            // AllowsTransparency = "True"
-            // Foreground = "White"
-
             this.Background = Brushes.Transparent;
             this.ResizeMode = ResizeMode.NoResize;
             this.WindowState = WindowState.Maximized;
@@ -120,21 +108,22 @@ namespace Dandi
             // 윈도우 스크린의 중앙에서 시작
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
+    }
 
 
-        // 바탕화면에 일정들을 나타내기 위한 함수
+    // 바탕화면에 일정들을 나타내기 위한 함수들
+    public partial class MainWindow : Window
+    {
         private void InitOnDisplaySettingChanged()
         {
             SystemEvents.DisplaySettingsChanged += SystemEvents_DisplaySettingsChanged;
         }
 
-        // 바탕화면에 일정들을 나타내기 위한 함수
         private void SystemEvents_DisplaySettingsChanged(object sender, EventArgs e)
         {
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(FillDisplay));
         }
 
-        // 바탕화면에 일정들을 나타내기 위한 함수
         private void InitWorkerW()
         {
             // Fetch the Progman window
@@ -188,7 +177,6 @@ namespace Dandi
             // it has to be done the LowLevel way (WH_MOUSE_LL, WH_KEYBOARD_LL).
         }
 
-        // 바탕화면에 일정들을 나타내기 위한 함수
         private IntPtr GetWindowHandle()
         {
             if (_currentHwnd != IntPtr.Zero) return _currentHwnd;
@@ -212,7 +200,6 @@ namespace Dandi
             this.Height = area.Height;
         }
 
-        // 바탕화면에 일정들을 나타내기 위한 함수
         private void ShowOnWorkerW()
         {
             var hwnd = GetWindowHandle();
