@@ -16,8 +16,8 @@ namespace Dandi.ViewModel
 {
     public class SchoolEventsViewModel : BindableBase
     {
-        private ObservableCollection<SchoolEvents> _schoolEventsItems = new ObservableCollection<SchoolEvents>();
-        public ObservableCollection<SchoolEvents> SchoolEventsItems
+        private ObservableCollection<SchoolSchedule> _schoolEventsItems = new ObservableCollection<SchoolSchedule>();
+        public ObservableCollection<SchoolSchedule> SchoolEventsItems
         {
             get => _schoolEventsItems;
             set => SetProperty(ref _schoolEventsItems, value);
@@ -27,24 +27,24 @@ namespace Dandi.ViewModel
 
         public async Task SetSchoolEventsList()
         {
-            TResponse<SchoolEventsResponse> resp = new TResponse<SchoolEventsResponse>();
-            // TODO : DandiService로 묶어서 따로 빼놓기
-            resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=" + DateTime.Now.Month, Method.GET, null);
+            //TResponse<SchoolEventsResponse> resp = new TResponse<SchoolEventsResponse>();
+            //// TODO : DandiService로 묶어서 따로 빼놓기
+            //resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=" + DateTime.Now.Month, Method.GET, null);
             
-            if (resp != null && resp.Status == 200 && resp.Data != null)
-            {
-                try
-                {
-                    foreach (var item in resp.Data.SchoolEvents)
-                    {
-                        SchoolEventsItems.Add((SchoolEvents)item.Clone());
-                    }
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine("SchoolEvents LoadDataAsync ERROR : " + e.Message);
-                }
-            }
+            //if (resp != null && resp.Status == 200 && resp.Data != null)
+            //{
+            //    try
+            //    {
+            //        foreach (var item in resp.Data.SchoolEvents)
+            //        {
+            //            SchoolEventsItems.Add((SchoolSchedule)item.Clone());
+            //        }
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        Debug.WriteLine("SchoolEvents LoadDataAsync ERROR : " + e.Message);
+            //    }
+            //}
         }
     }
 }

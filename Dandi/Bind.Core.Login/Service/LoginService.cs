@@ -28,7 +28,6 @@ namespace BIND.Core.Login.Network
         private const string TOKEN_REFRESH_URL = "/token/refresh";
         public async Task<TResponse<TokenInfo>> Login(string id, string pw)
         {
-
             var jObj = new JObject();
             jObj["device"] = "PC";
             jObj["user_id"] = id;

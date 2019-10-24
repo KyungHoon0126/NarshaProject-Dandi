@@ -20,16 +20,13 @@ namespace Dandi
         // Login
         public static LoginData loginData = new LoginData();
 
-        // 현재 사용자의 바탕화면 경로 추출
-        public static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
         // AutoLogin
         public App()
         {
             Setting.Load();
         }
 
-        // JoinedChannelsViewModel : 가입 채널 조회
+        //JoinedChannelsViewModel : 가입 채널 조회
         public static JoinedChannelViewModel joinedChannelViewModel = new JoinedChannelViewModel();
 
         // SchooolEventsViewModel : 학사 일정
@@ -41,5 +38,7 @@ namespace Dandi
 
         // MainWindow.xaml에 호출하기 위해서 App에 올린다. 
         public static MasterControl masterControl = new MasterControl();
+
+        public static AllScheduleViewModel allScheduleViewModel = new AllScheduleViewModel();
     }
 }

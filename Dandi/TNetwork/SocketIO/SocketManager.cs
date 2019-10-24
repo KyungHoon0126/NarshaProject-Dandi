@@ -19,8 +19,6 @@ namespace TNetwork
 {
     public partial class SocketManager
     {
-
-        
         private Manager manager;
 
         public delegate void SocketEventHandler(object sender, string resp);

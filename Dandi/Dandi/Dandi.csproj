@@ -77,20 +77,23 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Setting.cs" />
+    <Compile Include="Control\AllScheduleControl.xaml.cs">
+      <DependentUpon>AllScheduleControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\ChannelEvents\ChannelEventsControl.xaml.cs">
       <DependentUpon>ChannelEventsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Control\MasterControl\MasterControl.xaml.cs">
       <DependentUpon>MasterControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Design.xaml.cs">
-      <DependentUpon>Design.xaml</DependentUpon>
+    <Compile Include="Control\SettingControl.xaml.cs">
+      <DependentUpon>SettingControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\channel.cs" />
     <Compile Include="Model\ChannelSchedule.cs" />
     <Compile Include="Model\JoinedChannel.cs" />
     <Compile Include="Model\Author.cs" />
-    <Compile Include="Model\SchoolEvents.cs" />
+    <Compile Include="Model\SchoolSchedule.cs" />
     <Compile Include="Control\SchoolEvents\SchoolEventsContorl.xaml.cs">
       <DependentUpon>SchoolEventsContorl.xaml</DependentUpon>
     </Compile>
@@ -98,12 +101,18 @@
     <Compile Include="Service\Response\events.cs" />
     <Compile Include="Service\Response\JoinedChannelResponse.cs" />
     <Compile Include="Service\Response\SchoolEventsResponse.cs" />
+    <Compile Include="Service\ScheduleService.cs" />
     <Compile Include="SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AllScheduleViewModel.cs" />
     <Compile Include="ViewModel\JoinedChannelViewModel.cs" />
     <Compile Include="ViewModel\SchoolEventsViewModel.cs" />
     <Compile Include="W32.cs" />
+    <Page Include="Control\AllScheduleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control\ChannelEvents\ChannelEventsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,7 +121,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Design.xaml">
+    <Page Include="Control\SettingControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

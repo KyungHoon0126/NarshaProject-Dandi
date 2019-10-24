@@ -1,21 +1,28 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Interop;
-using System.Windows.Threading;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-namespace Dandi
+namespace Dandi.Control
 {
     /// <summary>
-    /// Interaction logic for SettingWindow.xaml
+    /// Interaction logic for SettingControl.xaml
     /// </summary>
-    public partial class SettingWindow : Window
+    public partial class SettingControl : UserControl
     {
         // 싱글톤 패턴
-        private static SettingWindow instance = null;
+        private static SettingControl instance = null;
 
         private static readonly object padlock = new object();
 
@@ -24,7 +31,7 @@ namespace Dandi
         /// 싱글톤 패턴
         /// </summary>
 
-        public static SettingWindow Instance
+        public static SettingControl Instance
         {
             get
             {
@@ -32,7 +39,7 @@ namespace Dandi
                 {
                     if (instance == null)
                     {
-                        instance = new SettingWindow();
+                        instance = new SettingControl();
                     }
 
                     return instance;
@@ -40,7 +47,7 @@ namespace Dandi
             }
         }
 
-        public SettingWindow()
+        public SettingControl()
         {
             instance = this;
             InitializeComponent();
@@ -48,8 +55,8 @@ namespace Dandi
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Left = 150;
-            this.Top = 150;
+            // this.Left = 150;
+            // this.Top = 150;
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -62,7 +69,7 @@ namespace Dandi
             SettingWindow.Instance.Close();
             Environment.Exit(0);
             System.Diagnostics.Process.GetCurrentProcess().Kill();
-            this.Close();
+            // this.Close();
 
             // TODO : 프로그램 종료시 원래 이미지로 돌아가도록 고치기, 밑의 코드랑 같이쓰면 프로그램이 Exit버튼을 눌렀을 때 안꺼짐.
             // int nResult;

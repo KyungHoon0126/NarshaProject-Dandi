@@ -38,59 +38,59 @@ namespace Dandi.ViewModel
 
         public async Task SetJoinedChannelList()
         {
-            TResponse<JoinedChannelResponse> resp = new TResponse<JoinedChannelResponse>();
+            //TResponse<JoinedChannelResponse> resp = new TResponse<JoinedChannelResponse>();
             
-            resp = await networkManager.GetResponse<JoinedChannelResponse>("channel", Method.GET, null);
+            //resp = await networkManager.GetResponse<JoinedChannelResponse>("channel", Method.GET, null);
 
-            if (resp != null && resp.Status == 200 && resp.Data != null)
-            {
-                try
-                {
-                    foreach (var item in resp.Data.JoinedChannel)
-                    {
-                        JoinedChannelItems.Add((JoinedChannel)item.Clone());
-                    }
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine("JoinedChannelsEvent LoadDataAsync ERROR : " + e.Message);
-                }
-            }   
+            //if (resp != null && resp.Status == 200 && resp.Data != null)
+            //{
+            //    try
+            //    {
+            //        foreach (var item in resp.Data.JoinedChannel)
+            //        {
+            //            JoinedChannelItems.Add((JoinedChannel)item.Clone());
+            //        }
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        Debug.WriteLine("JoinedChannelsEvent LoadDataAsync ERROR : " + e.Message);
+            //    }
+            //}   
 
-            // 사용자가 가입한 채널의 모든 일정 조회 후 Add
-            for(int i = 0; i < JoinedChannelItems.Count; i++)
-            { // breakpoint
-                // TODO : DandiService로 묶어서 호출 부문만 따로 만들기
-                var res = await networkManager.GetResponse<eventes>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
+            //// 사용자가 가입한 채널의 모든 일정 조회 후 Add
+            //for(int i = 0; i < JoinedChannelItems.Count; i++)
+            //{ // breakpoint
+            //    // TODO : DandiService로 묶어서 호출 부문만 따로 만들기
+            //    var res = await networkManager.GetResponse<eventes>("channel-event?channel_id=" + JoinedChannelItems[i].Id, Method.GET, null);
 
-                ChannelSchedule channelSchedule = new ChannelSchedule();
+            //    ChannelSchedule channelSchedule = new ChannelSchedule();
 
-                foreach (var item in res.Data.events)
-                {
-                    // ChannelEventEvents
-                    channelSchedule.Content = item.Content;
-                    channelSchedule.End_Date = item.End_Date;
-                    channelSchedule.Id = item.Id;
-                    channelSchedule.Start_Date = item.Start_Date;
-                    channelSchedule.Title = item.Title;
-                    channelSchedule.Author.UserId = item.Author.UserId;
-                    channelSchedule.Author.UserName = item.Author.UserName;
+            //    foreach (var item in res.Data.events)
+            //    {
+            //        // ChannelEventEvents
+            //        channelSchedule.Content = item.Content;
+            //        channelSchedule.End_Date = item.End_Date;
+            //        channelSchedule.Id = item.Id;
+            //        channelSchedule.Start_Date = item.Start_Date;
+            //        channelSchedule.Title = item.Title;
+            //        channelSchedule.Author.UserId = item.Author.UserId;
+            //        channelSchedule.Author.UserName = item.Author.UserName;
 
 
-                    // ChannelEventChannel
-                    channelSchedule.Channel.Id = item.Channel.Id;
-                    channelSchedule.Channel.Name = item.Channel.Name;
-                    channelSchedule.Channel.Explain = item.Channel.Explain;
-                    channelSchedule.Channel.Create_User = item.Channel.Create_User;
-                    channelSchedule.Channel.Color = item.Channel.Color;
-                    channelSchedule.Channel.School_Id = item.Channel.School_Id;
-                    channelSchedule.Channel.IsPublic = item.Channel.IsPublic;
-                    channelSchedule.Channel.CreatedAt = item.Channel.CreatedAt;
-                    channelSchedule.Channel.ThumbNail = item.Channel.ThumbNail;
+            //        // ChannelEventChannel
+            //        channelSchedule.Channel.Id = item.Channel.Id;
+            //        channelSchedule.Channel.Name = item.Channel.Name;
+            //        channelSchedule.Channel.Explain = item.Channel.Explain;
+            //        channelSchedule.Channel.Create_User = item.Channel.Create_User;
+            //        channelSchedule.Channel.Color = item.Channel.Color;
+            //        channelSchedule.Channel.School_Id = item.Channel.School_Id;
+            //        channelSchedule.Channel.IsPublic = item.Channel.IsPublic;
+            //        channelSchedule.Channel.CreatedAt = item.Channel.CreatedAt;
+            //        channelSchedule.Channel.ThumbNail = item.Channel.ThumbNail;
 
-                    AllChannelScheduleItems.Add((ChannelSchedule)channelSchedule.Clone());
-                }
-            } // breakpoint
+            //        AllChannelScheduleItems.Add((ChannelSchedule)channelSchedule.Clone());
+            //    }
+            //} // breakpoint
 
             //JoinedChannelItems.ForEach(async x =>
             //{

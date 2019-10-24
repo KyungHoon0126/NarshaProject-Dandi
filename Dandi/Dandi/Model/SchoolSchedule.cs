@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dandi.Model
 {
-    public class SchoolEvents : BindableBase, ICloneable
+    public class SchoolSchedule : BindableBase, ICloneable
     {
         private string _title = string.Empty;
         public string Title
@@ -32,7 +32,7 @@ namespace Dandi.Model
 
         public object Clone()
         {
-            return new SchoolEvents
+            return new SchoolSchedule
             {
                 Title = this.Title,
                 StartDate = this.StartDate,

@@ -10,11 +10,11 @@ namespace Dandi.Service.Response
 {
     public class SchoolEventsResponse
     {
-        private List<SchoolEvents> _schoolEvents;
+        private List<SchoolSchedule> _schoolEvents;
 
         [JsonProperty("events")]
 
-        public List<SchoolEvents> SchoolEvents
+        public List<SchoolSchedule> SchoolEvents
         {
             get => _schoolEvents;
             set

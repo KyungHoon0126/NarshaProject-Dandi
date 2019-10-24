@@ -35,7 +35,7 @@ namespace Dandi
             InitializeComponent();
             InitWorkerW();
             InitOnDisplaySettingChanged();
-
+                
             // this.Loaded += MainWindow_Loaded;
 
             App.loginData.loginViewModel.OnLoginResultRecieved += LoginViewModel_OnLoginResultRecieved;
@@ -43,7 +43,7 @@ namespace Dandi
 
 
         // 로그인 성공 유무 판단 함수
-        public void LoginViewModel_OnLoginResultRecieved(object sender, bool success)
+        public async void LoginViewModel_OnLoginResultRecieved(object sender, bool success)
         {
             if(success)
             {
@@ -56,13 +56,16 @@ namespace Dandi
                 JoinedChannelDataLoading();
 
                 // MasterControl
-                ctrlMaster.Visibility = Visibility.Visible;
+                // ctrlMaster.Visibility = Visibility.Visible;
 
-                // Design Test
-                //Title.Visibility = Visibility.Visible;
+                ctrlAllSchedule.Visibility = Visibility.Visible;
 
                 MainWindow_Loaded();
                 UpdateScreen();
+
+
+                // 로그인시 실행, App이므로 NullReference 오류 뜸.
+                await App.allScheduleViewModel.LoadDataAsync();
 
                 SettingWindow.Instance.Show();
             }
@@ -151,6 +154,7 @@ namespace Dandi
                                             IntPtr.Zero,
                                             "SHELLDLL_DefView",
                                             IntPtr.Zero);
+
 
                 if (p != IntPtr.Zero)
                 {

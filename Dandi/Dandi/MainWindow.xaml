@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dandi"
+        xmlns:control="clr-namespace:Dandi.Control"
         mc:Ignorable="d"
         Title="잊지말고 미루지 말고 단단히 챙기자, 내일상의 단디" Height="450" Width="800"
         WindowStyle="None"
@@ -15,5 +16,6 @@
         <!--<local:ChannelEventsControl x:Name="ctrlEventControl" Visibility="Collapsed"/>-->
         <local:MasterControl x:Name="ctrlMaster" Visibility="Collapsed"/>
         <!--<local:Design x:Name="Title" Visibility="Collapsed"/>-->
+        <control:AllScheduleControl x:Name="ctrlAllSchedule" Visibility="Collapsed"/>
     </Grid>
 </Window>

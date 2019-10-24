@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dandi
+namespace Dandi.Control
 {
     /// <summary>
-    /// Interaction logic for Design.xaml
+    /// Interaction logic for AllScheduleControl.xaml
     /// </summary>
-    public partial class Design : UserControl
+    public partial class AllScheduleControl : UserControl
     {
-        public Design()
+        public AllScheduleControl()
         {
             InitializeComponent();
+            this.DataContext = App.allScheduleViewModel;
         }
     }
 }
