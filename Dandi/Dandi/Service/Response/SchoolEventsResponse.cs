@@ -16,7 +16,7 @@ namespace Dandi.Service.Response
 
         public List<SchoolSchedule> SchoolEvents
         {
-            get => _schoolEvents;
+            get => _schoolEvents;   
             set
             {
                 _schoolEvents = value;

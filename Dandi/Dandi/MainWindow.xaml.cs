@@ -65,7 +65,7 @@ namespace Dandi
 
 
                 // 로그인시 실행, App이므로 NullReference 오류 뜸.
-                await App.allScheduleViewModel.LoadDataAsync();
+                // await App.allScheduleViewModel.LoadDataAsync();
 
                 SettingWindow.Instance.Show();
             }

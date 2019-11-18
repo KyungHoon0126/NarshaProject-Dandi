@@ -31,22 +31,15 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        
-        
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="9*"/>
-            </Grid.RowDefinitions>
-            
-            <Grid>
-                <Button Content="학사일정보기" />
-            </Grid>
-            
-            <ListView x:Name="ChannelEvents" 
-                    BorderThickness="0"
-                    ItemsSource="{Binding JoinedChannel}">
 
+
+        <Grid Grid.Column="0">
+            <ListView x:Name="ChannelEvents"
+                      BorderThickness="0"
+                      ItemsSource="{Binding JoinedChannel}"
+                      SelectedItem="{Binding SelectedChannel}">
+
+                
                 <!--ListView 중앙 정렬 스타일-->
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
@@ -68,6 +61,7 @@
             </ListView>
         </Grid>
 
+        
         <Grid Grid.Column="1">
             <ListView ItemsSource="{Binding ChannelScheduleItems}">
                 <ListView.ItemTemplate>

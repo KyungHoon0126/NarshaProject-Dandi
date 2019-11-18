@@ -27,24 +27,24 @@ namespace Dandi.ViewModel
 
         public async Task SetSchoolEventsList()
         {
-            //TResponse<SchoolEventsResponse> resp = new TResponse<SchoolEventsResponse>();
-            //// TODO : DandiService로 묶어서 따로 빼놓기
-            //resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=" + DateTime.Now.Month, Method.GET, null);
-            
-            //if (resp != null && resp.Status == 200 && resp.Data != null)
-            //{
-            //    try
-            //    {
-            //        foreach (var item in resp.Data.SchoolEvents)
-            //        {
-            //            SchoolEventsItems.Add((SchoolSchedule)item.Clone());
-            //        }
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        Debug.WriteLine("SchoolEvents LoadDataAsync ERROR : " + e.Message);
-            //    }
-            //}
+            TResponse<SchoolEventsResponse> resp = new TResponse<SchoolEventsResponse>();
+            // TODO : DandiService로 묶어서 따로 빼놓기
+            resp = await networkManager.GetResponse<SchoolEventsResponse>("school/events?year=2019&month=" + DateTime.Now.Month, Method.GET, null);
+
+            if (resp != null && resp.Status == 200 && resp.Data != null)
+            {
+                try
+                {
+                    foreach (var item in resp.Data.SchoolEvents)
+                    {
+                        SchoolEventsItems.Add((SchoolSchedule)item.Clone());
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine("SchoolEvents LoadDataAsync ERROR : " + e.Message);
+                }
+            }
         }
     }
 }

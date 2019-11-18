@@ -12,8 +12,8 @@ namespace Dandi.Service
 {
     public class ScheduleService
     {
-        const string CHANNEL_URL = "/channel";
-        const string SCHOOL_SCHEDULE_URL = "/school/search-school";
+        const string CHANNEL_URL = "channel";
+        const string SCHOOL_SCHEDULE_URL = "school/search-school";
 
         NetworkManager networkManager = new NetworkManager();
         
