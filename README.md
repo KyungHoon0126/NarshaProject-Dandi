@@ -19,13 +19,13 @@
 
 ## Stack
 ||Android|Server|Window|Web|
-|------|---|---|
+|------|---|---|---|---|
 |Development People|김주엽, 이영은|최진우|김경훈|권순관, 김혜선, 오하형|
 |Development Language|Java, Retrofit2|Java Script|C#, WPF, UWP|JavaScript, React, Html, CSS|
 |Development Tool|Android Studio|Visual Studio Code|Visual Studio 2019|Visual Studio Code|
 
-|Android|Server|Window|Web|
-|------|---|---|---|
+|     |Android|Server|Window|Web|
+|------|---|---|---|---|
 |테스트1|테스트2|테스트3|
 |테스트1|테스트2|테스트3|
 |테스트1|테스트2|테스트3|
