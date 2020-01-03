@@ -24,8 +24,9 @@
 |Development Language|Java, Retrofit2|Java Script|C#, WPF, UWP|JavaScript, React, Html, CSS|
 |Development Tool|Android Studio|Visual Studio Code|Visual Studio 2019|Visual Studio Code|
 
+
 ## UI / UX
-![윈도우 로그인](./다운로드/윈도우 로그인.png)
+
 
 ## 2019 ICT EXPO
 - 2019 ICT 융합 엑스포에서 Dandi 단디 프로젝트를 가지고 참가를 하였습니다.
