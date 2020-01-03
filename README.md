@@ -18,11 +18,11 @@
 - Android, Web, Window 3개의 학생들이 쉽게 접근할 수 있는 다양한 플랫폼
 
 ## Stack
-||Android|Server|Window|Web|
+||:Android:|:Server:|:Window:|:Web:|
 |------|-----|-----|-----|-----|
-|Development People|김주엽, 이영은|최진우|김경훈|권순관, 김혜선, 오하형|
-|Development Language|Java, Retrofit2|Java Script|C#, WPF, UWP|JavaScript, React, Html, CSS|
-|Development Tool|Android Studio|Visual Studio Code|Visual Studio 2019|Visual Studio Code|
+|:Development People:|:김주엽, 이영은:|:최진우:|:김경훈:|:권순관, 김혜선, 오하형:|
+|:Development Language:|:Java, Retrofit2:|:Java Script:|:C#, WPF, UWP:|:JavaScript, React, Html, CSS:|
+|:Development Tool:|:Android Studio:|:Visual Studio Code:|:Visual Studio 2019:|:Visual Studio Code:|
 
 ## UI / UX
 
