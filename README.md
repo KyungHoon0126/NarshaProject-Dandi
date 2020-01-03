@@ -26,9 +26,9 @@
 
 
 ## UI / UX
-![윈도우 로그인](https://user-images.githubusercontent.com/48943501/71718954-245c7a80-2e60-11ea-941b-8647bd2c4132.PNG)
-![윈도우 일정 View](https://user-images.githubusercontent.com/48943501/71718905-0858d900-2e60-11ea-8481-c5d942bdda28.png)
-
+<img src="https://user-images.githubusercontent.com/48943501/71718954-245c7a80-2e60-11ea-941b-8647bd2c4132.PNG" width="90%"></img>
+<img src="https://user-images.githubusercontent.com/48943501/71718905-0858d900-2e60-11ea-8481-c5d942bdda28.png" width="90%"></img>
+<img src="https://user-images.githubusercontent.com/48943501/71719207-f0358980-2e60-11ea-85c4-81a7430b1274.PNG" width="90%"></img>
 
 ## 2019 ICT EXPO
 - 2019 ICT 융합 엑스포에서 Dandi 단디 프로젝트를 가지고 참가를 하였습니다.
