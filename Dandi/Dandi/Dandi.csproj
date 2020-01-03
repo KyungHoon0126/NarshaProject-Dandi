@@ -198,34 +198,13 @@
     <Resource Include="Assets\Icon\bind.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\footer1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\profile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\Icon\DANDI_logo_color_32x32.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\image.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\DANDI_logo_typo_white.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\adsfadsfadf.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\노란제일큰배경.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\비밀번호를입력하세요.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

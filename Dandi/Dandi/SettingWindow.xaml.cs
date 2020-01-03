@@ -66,7 +66,7 @@ namespace Dandi
 
             // TODO : 프로그램 종료시 원래 이미지로 돌아가도록 고치기, 밑의 코드랑 같이쓰면 프로그램이 Exit버튼을 눌렀을 때 안꺼짐.
             // int nResult;
-            // nResult = WinAPI.SystemParametersInfo(20, 0, "C:\\Users\\user\\Desktop\\모든 파일\\모든 자료\\사진\\윈도우배경화면\\WallPaper10.jpg", 0x1);
+            //nResult = WinAPI.SystemParametersInfo(20, 0, "C:\\Users\\user\\Desktop\\모든 파일\\모든 자료\\사진\\윈도우배경화면\\WallPaper10.jpg", 0x1);
         }
 
         // 현재 사용자의 바탕화면 경로 추출
