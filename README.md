@@ -26,6 +26,8 @@
 
 
 ## UI / UX
+![윈도우 로그인](https://user-images.githubusercontent.com/48943501/71718954-245c7a80-2e60-11ea-941b-8647bd2c4132.PNG)
+![윈도우 일정 View](https://user-images.githubusercontent.com/48943501/71718905-0858d900-2e60-11ea-8481-c5d942bdda28.png)
 
 
 ## 2019 ICT EXPO
