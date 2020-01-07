@@ -23,12 +23,20 @@
 ||Android|Server|Window|Web|
 |:-----------:|:-----:|:-----:|:-----:|:-----:|
 |Development People|김주엽, 이영은|최진우|김경훈|권순관, 김혜선, 오하형|
-|Development Language|Java, Retrofit2|Java Script|C#, WPF, UWP|JavaScript, React, Html, CSS|
-|Development Tool|Android Studio|Visual Studio Code|Visual Studio 2019|Visual Studio Code|
+|Development Language|Java, Retrofit2|Java Script|C#|JavaScript, React, Html, CSS|
+|Development Tool|Android Studio|Visual Studio Code|WPF, UWP, Visual Studio 2019|Visual Studio Code|
 
 ## UI / UX
+- 윈도우(WPF) 로그인 화면
+
 <img src="https://user-images.githubusercontent.com/48943501/71718954-245c7a80-2e60-11ea-941b-8647bd2c4132.PNG" width="80%"></img>
+
+- 윈도우(WPF) 일정이 바탕화면에 나타나는 화면
+
 <img src="https://user-images.githubusercontent.com/48943501/71718905-0858d900-2e60-11ea-8481-c5d942bdda28.png" width="80%"></img>
+
+- 윈도우(UWP) 다가오는 일정, 7일 이내 일정, 30일 이내 일정, 채널별 일정을 따로 볼 수 있는 프로그램.
+
 <img src="https://user-images.githubusercontent.com/48943501/71719207-f0358980-2e60-11ea-85c4-81a7430b1274.PNG" width="80%"></img>
 
 ## 2019 ICT EXPO
